@@ -1,0 +1,61 @@
+form {
+    /* background-color: rgb(6, 100, 138); */
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    margin-top: 200px;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 200px;
+    padding-right: 200px;
+    /* background-image: url('/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+html {
+    background-image: url('/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+#avat,
+label {
+    color: white;
+}
+
+#un,
+#email,
+#pass {
+    margin-top: 30px;
+    height: 30px;
+    width: 500px;
+    background-color: rgb(27, 36, 39);
+    color: silver;
+    outline: none;
+    /* border: 1px solid silver; */
+    border: none;
+    padding: 7px;
+}
+
+#sub {
+    height: 35px;
+    width: 514px;
+    background-color: rgb(14, 161, 219);
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+#sub:hover {
+
+    background-color: rgb(104, 198, 235);
+}

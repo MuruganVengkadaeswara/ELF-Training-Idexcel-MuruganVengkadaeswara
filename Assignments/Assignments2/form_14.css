@@ -1,0 +1,106 @@
+form {
+  border: 1px solid black;
+  width: 600px;
+  height: 600px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 200px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+  background-color: black;
+  color: white;
+  width: 600px;
+  height: 50px;
+  border-collapse: collapse;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 600px;
+  table-layout: auto;
+}
+
+/* tbody {
+  margin-left: 20px;
+} */
+
+td {
+  padding: 12px;
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: smaller;
+  margin-top: 20px;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+html {
+  background-image: linear-gradient(to right, rgb(82, 206, 255), indigo);
+}
+
+input.inarea,
+#subject {
+  background-color: lightgray;
+  border: none;
+  border-radius: 2px;
+  height: 30px;
+}
+
+#bot {
+  font-size: smaller;
+  padding: 20px;
+  padding-left: 30px;
+}
+
+#bot label {
+  font-weight: 200;
+}
+
+#email,
+#company {
+  width: 422px;
+}
+
+#areacode {
+  width: 70px;
+}
+
+label {
+  font-weight: bold;
+}
+
+#subject {
+  width: 422px;
+  color: gray;
+}
+
+#submit_button {
+  height: 30px;
+  width: 100px;
+  margin-top: 20px;
+  background-color: rgb(255, 80, 80);
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-weight: 600;
+}
+
+#submit_button:hover {
+  background-color: rgb(235, 138, 27);
+}
+
+.bt {
+  font-size: 12px;
+  color: gray;
+}
+
+input[type="radio"] {
+  position: relative;
+}

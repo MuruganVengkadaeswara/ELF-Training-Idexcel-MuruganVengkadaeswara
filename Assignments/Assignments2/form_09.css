@@ -1,0 +1,31 @@
+form {
+    background-color: rgb(137, 119, 240);
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: start;
+    width: max-content;
+    height: max-content;
+    /* margin-left: 400px; */
+}
+
+input[type="number"] {
+    width: 60px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+
+}
+
+#t2 {
+    border: 1px solid black;
+}
+
+#but {
+    margin-left: 400px;
+    margin-top: 30px;
+}
