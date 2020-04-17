@@ -1,0 +1,39 @@
+table,
+td,
+th {
+    /* border: 1px solid black;
+    border-collapse: collapse; */
+    text-align: center;
+    padding: 20px;
+    /* for space inside the table */
+    border-radius: 10px;
+
+}
+
+table {
+    width: 500px;
+    margin: auto;
+    margin-top: 200px;
+
+
+}
+
+th {
+    background-color: cornflowerblue;
+}
+
+tr:nth-child(even) {
+    background-color: burlywood;
+}
+
+tr:nth-child(odd) {
+    background-color: beige;
+}
+
+td:hover {
+    background-color: chocolate;
+    color: white;
+    cursor: pointer;
+
+    /* for cursor to hand */
+}

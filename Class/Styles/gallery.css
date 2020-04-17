@@ -1,0 +1,17 @@
+img {
+  height: 280px;
+  width: 399px;
+  padding: 10px;
+  border: none;
+  margin: 5px;
+  transition: all 1s;
+}
+
+h1 {
+  text-align: center;
+}
+
+img:hover {
+  /* transform: scale(1.2, 1.2); */
+  transform: rotate(360deg);
+}
