@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <form action="" method="POST">
+        <div id="name" class="namee">
+            <label for="fname">Name</label><br>
+            <input type="text" name="name" id="fname">
+        </div>
+        <div>
+            <label for="psd">Password</label><br>
+            <input type="password" name="psd" id="psd">
+        </div>
+        <div>
+            <label for="mob">Mobile</label><br>
+            <input type="tel" name="mobile" id="mob">
+        </div>
+        <div>
+            <label for="mail">Email</label><br>
+            <input type="email" name="email" id="mail_id">
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="gm">Male
+            <input type="radio" name="gender" id="gf">Female
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="File">Resume</label>
+            <input type="file" name="file" id="Upload">
+        </div>
+        <br>
+        <div>
+            <label for="Branch">Branch</label>
+            <select name="Branch" id="brch">
+                <!--Important-->
+                <option value="0" selected disabled>select</option>
+                <option value="1">CSE</option>
+                <option value="2">ECE</option>
+                <option value="3">Civil</option>
+            </select>
+        </div><br>
+
+
+
+        <div>
+            <input type="checkbox" name="CheckBox" id="ck" required>
+            <label for="Check">I agree to the terms and conditions</label>
+        </div><br>
+
+        <div>
+            <label for="Comments">Comments</label><br>
+            <textarea name="Comments" id="cmt" cols="10" rows="5"></textarea>
+        </div><br>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+</body>
+
+</html>
