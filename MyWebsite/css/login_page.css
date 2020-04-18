@@ -1,0 +1,148 @@
+ul {
+    list-style-type: none;
+
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+li {
+    float: left;
+    padding: 20px;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+
+
+#navbar {
+    height: max-content;
+    width: max-content;
+    margin-left: 1300px;
+    margin-top: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+
+}
+
+.bg-img {
+    background-image: url('/MyWebsite/media/boss6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+.bg-text {
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 2;
+    position: absolute;
+    padding: 5px;
+    margin-top: 100px;
+    outline: none;
+    color: rgb(55, 55, 55);
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-top: -7px;
+    opacity: 0.9;
+
+}
+
+#logo1 {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+    opacity: 0.9;
+
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(2);
+    transition-duration: 0.7s;
+
+}
+
+#logo1:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+
+}
+
+.hovtext:hover {
+
+    transform: scale(1.5, 1.5);
+    transition-duration: 0.5s, 0.5s;
+}
+
+#login_container {
+
+    margin-left: 760px;
+    margin-top: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+}
+
+table {
+    height: 350px;
+    width: 300px;
+}
+
+
+td {
+    padding-left: 40px;
+}
+
+
+input[type=text],
+input[type=password] {
+    height: 30px;
+    width: 200px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border: none;
+}
+
+input[type=submit] {
+    height: 30px;
+    width: 150px;
+    margin-left: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+::placeholder {
+    color: white;
+}

@@ -1,0 +1,150 @@
+ul {
+    list-style-type: none;
+
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+li {
+    float: left;
+    padding: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+#name {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+}
+
+#navbar {
+    height: max-content;
+    width: max-content;
+    margin-left: 1300px;
+    margin-top: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin-left: 100px;
+    margin-top: 50px;
+
+}
+
+#n2 {
+    font-weight: bold;
+}
+
+.bg-img {
+    background-image: url('/MyWebsite/media/busmann.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+.bg-text {
+    /* background-color: rgba(0, 0, 0, 0.09); */
+    z-index: 2;
+    position: absolute;
+    padding: 5px;
+    margin-top: 100px;
+    outline: none;
+    color: white;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-top: -7px;
+    opacity: 0.9;
+
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(1.4);
+    transition-duration: 0.7s;
+}
+
+.hovtext:hover {
+
+    transform: scale(1.5, 1.5);
+    transition-duration: 0.5s, 0.5s;
+}
+
+#s {
+    margin-left: -10px;
+    margin-top: 240px;
+    font-size: 350px;
+    font-weight: 10;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#st1,
+#st2,
+#st3 {
+    margin-left: 130px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: lighter;
+    font-style: italic;
+    letter-spacing: 6px;
+}
+
+#st2 {
+    margin-top: 400px;
+}
+
+#st1 {
+    margin-top: 450px;
+}
+
+#st3 {
+    margin-top: 500px;
+}
+
+#boxcon {
+    height: fit-content;
+    width: fit-content;
+    margin-left: 750px;
+    padding: 20px;
+}
+
+
+#st3:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
+
+}
+
+#st2:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
+}
+
+#st1:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 1s;
+}
+
+#s:hover {
+    transform: rotateY(360deg);
+    transition-duration: 1.5s;
+}
