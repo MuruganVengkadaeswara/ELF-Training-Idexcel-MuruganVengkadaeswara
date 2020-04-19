@@ -154,7 +154,7 @@ h1 {
     z-index: 2;
     height: 200px;
     width: 200px;
-    margin-top: 300px;
+    margin-top: 250px;
     margin-left: -20px;
 
 }
@@ -168,4 +168,18 @@ h1 {
 .icon:hover {
     transform: rotate(-360deg) scale(2);
     transition-duration: 0.7s;
+}
+
+#para {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 710px;
+    margin-top: 800px;
+    font-size: large;
+    letter-spacing: 5px;
+    font-style: italic;
+
 }

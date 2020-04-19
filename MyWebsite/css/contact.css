@@ -1,13 +1,11 @@
 ul {
     list-style-type: none;
-
 }
 
 body,
 html {
     height: 100%;
 }
-
 
 li {
     float: left;
@@ -20,35 +18,32 @@ li a {
     color: black;
 }
 
-
-
 #navbar {
     height: max-content;
     width: max-content;
-    margin-left: 1300px;
+    margin-left: 1200px;
     margin-top: -50px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-
 }
 
 .bg-img {
-    background-image: url('/MyWebsite/media/boss6.jpg');
+    background-image: url("/MyWebsite/media/boss6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 110%;
-    filter: blur(6px);
-    -webkit-filter: blur(6px);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
 .bg-text {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 2;
     position: absolute;
     padding: 5px;
     margin-top: 100px;
     outline: none;
-    color: rgb(55, 55, 55);
+    color: rgb(0, 0, 0);
 }
 
 #logo {
@@ -58,8 +53,7 @@ li a {
     border-radius: 30px;
     margin-left: 40px;
     margin-top: -7px;
-    opacity: 0.9;
-
+    opacity: 1;
 }
 
 #logo1 {
@@ -67,33 +61,26 @@ li a {
     width: 50px;
     object-fit: cover;
     border-radius: 30px;
-    opacity: 0.9;
-
 }
 
 #logo:hover {
     transform: rotate(-360deg) scale(2);
     transition-duration: 0.7s;
-
 }
-
-
 
 #logo1:hover {
     transform: rotate(-360deg) scale(1.2);
     transition-duration: 0.7s;
-
 }
 
 .hovtext:hover {
-
     transform: scale(1.5, 1.5);
     transition-duration: 0.5s, 0.5s;
 }
 
 #login_container {
 
-    margin-left: 760px;
+    margin-left: 750px;
     margin-top: 300px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
@@ -107,31 +94,38 @@ table {
     width: 300px;
 }
 
+th {
+    padding-left: 10px;
+}
 
 td {
     padding-left: 40px;
 }
 
-
-input[type=text],
-input[type=password] {
-    height: 30px;
-    width: 200px;
-    padding-left: 10px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    border-radius: 5px;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    border: none;
+#hireme {
+    padding-left: 110px;
+    font-weight: 600;
 }
 
-input[type=submit] {
+#mail_id {
+    font-size: large;
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+    margin-top: -50px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+#mail_id a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+input[type=button] {
     height: 30px;
     width: 150px;
-    margin-left: 30px;
-    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     border-radius: 5px;
@@ -140,61 +134,28 @@ input[type=submit] {
     font-weight: 600;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
     background-color: rgba(0, 0, 0, 0.9);
 
 }
 
-::placeholder {
-    color: white;
-}
-
-/* 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-} */
-
-#dropdwn {
-    /* margin-top: 200px; */
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-}
-
-.ddcontent {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 2;
+#foot_icon {
     position: absolute;
-    padding: 10px;
-    /* margin-top: 100px; */
-    outline: none;
-    margin-left: 50px;
-    color: rgb(55, 55, 55);
-    /* color: white; */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    margin-top: 300px;
+    margin-left: -20px;
+
 }
 
-.ddcontent a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    font-weight: 600;
-    color: white;
-    padding: 12px 16px;
-    display: block;
+#foot_icon figure img {
+    height: 50px;
+    width: 50px;
+    padding: 20px;
 }
 
-.ddcontent a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#dropdwn:hover .ddcontent {
-    display: block;
+.icon:hover {
+    transform: rotate(-360deg) scale(2);
+    transition-duration: 0.7s;
 }

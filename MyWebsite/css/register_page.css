@@ -183,3 +183,44 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+#dropdwn {
+  /* margin-top: 200px; */
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.ddcontent {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: absolute;
+  padding: 10px;
+  /* margin-top: 100px; */
+  outline: none;
+  margin-left: 50px;
+  color: rgb(55, 55, 55);
+  /* color: white; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.ddcontent a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+  padding: 12px 16px;
+  display: block;
+}
+
+.ddcontent a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dropdwn:hover .ddcontent {
+  display: block;
+}
