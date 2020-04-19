@@ -148,3 +148,24 @@ h1 {
     transform: rotateY(360deg);
     transition-duration: 1.5s;
 }
+
+#foot_icon {
+    position: absolute;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    margin-top: 300px;
+    margin-left: -20px;
+
+}
+
+#foot_icon figure img {
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+}
+
+.icon:hover {
+    transform: rotate(-360deg) scale(2);
+    transition-duration: 0.7s;
+}
