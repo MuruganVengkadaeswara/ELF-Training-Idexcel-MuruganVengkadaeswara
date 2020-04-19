@@ -1,0 +1,217 @@
+ul {
+    list-style-type: none;
+
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+li {
+    float: left;
+    padding: 20px;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+
+
+#navbar {
+    height: max-content;
+    width: max-content;
+    margin-left: 1300px;
+    margin-top: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+
+}
+
+.bg-img {
+    background-image: url('/MyWebsite/media/boss14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+
+}
+
+.bg-text {
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+    position: absolute;
+    padding: 5px;
+    margin-top: 100px;
+    outline: none;
+    color: rgb(15, 15, 15);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-top: -7px;
+    opacity: 0.9;
+    position: absolute;
+
+}
+
+#logo1 {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+    opacity: 0.9;
+
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(2);
+    transition-duration: 0.7s;
+
+}
+
+#logo1:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+
+}
+
+.hovtext:hover {
+
+    transform: scale(1.5, 1.5);
+    transition-duration: 0.5s, 0.5s;
+}
+
+#about_container {
+    margin-left: 150px;
+    margin-top: 200px;
+    position: absolute;
+    font-size: larger;
+    border: 1px solid black;
+}
+
+#edu_container {
+    margin-left: 450px;
+    margin-top: 200px;
+    position: absolute;
+    font-size: larger;
+    border: 1px solid black;
+}
+
+#mission_container {
+    margin-left: 750px;
+    margin-top: 200px;
+    position: absolute;
+    font-size: larger;
+    border: 1px solid black;
+}
+
+#interest_container {
+    margin-left: 1020px;
+    margin-top: 200px;
+    position: absolute;
+    font-size: larger;
+    border: 1px solid black;
+}
+
+.p-text {
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+    position: absolute;
+    /* padding: 5px; */
+    color: rgb(15, 15, 15);
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+}
+
+#abt_head {
+    border-bottom: 1.2px solid black;
+    letter-spacing: 5px;
+}
+
+#img_slide {
+    position: absolute;
+    z-index: 2;
+    height: 200px;
+    width: 800px;
+    margin-left: 400px;
+    margin-top: 830px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#img_slide img {
+    height: 300px;
+    width: 500px;
+    /* margin-left: 500px; */
+}
+
+@keyframes img_slide {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+
+    50% {
+        left: -100%;
+    }
+
+
+    60% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    80% {
+        left: -300%;
+    }
+
+    90% {
+        left: -300%;
+    }
+
+    100% {
+        left: 0;
+    }
+
+}
+
+#img_slide figure {
+    width: 400%;
+    position: relative;
+    animation: 10s img_slide infinite;
+
+}
+
+#img_slide figure img {
+    width: 24%;
+    height: 100%;
+    float: left;
+
+}
+
+#img_slide figure:hover {
+    animation-play-state: paused;
+}
