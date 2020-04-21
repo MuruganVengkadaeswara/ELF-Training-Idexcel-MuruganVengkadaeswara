@@ -67,8 +67,9 @@
 }
 
 #img_slide figure img {
-    width: 20%;
-    float: left;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
 
 }
 
