@@ -1,0 +1,86 @@
+body,
+html {
+    height: 100%;
+}
+
+.jumbotron {
+    height: 500px;
+    width: 500px;
+    /* position: absolute; */
+    z-index: 1;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    /* color: rgb(148, 145, 145); */
+    /* z-index: 2; */
+    /* background-image: url('/MyWebsite/media/ban1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(); */
+
+}
+
+/* .row {
+    padding-left: 100px;
+    padding-top: 50px;
+} */
+
+.fa-graduation-cap {
+    color: rgb(15, 187, 240);
+}
+
+.fa-bullseye {
+    color: rgb(69, 173, 241);
+}
+
+.fa-user {
+    color: rgb(15, 187, 240);
+}
+
+.fa-rocket {
+    color: rgb(15, 187, 240);
+
+}
+
+.fa-gamepad {
+    color: rgb(15, 187, 240);
+
+}
+
+.fa-graduation-cap:hover {
+    transform: rotate(-360deg) scale(2);
+    transition-duration: 0.7s;
+}
+
+
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 40px;
+    opacity: 0.9;
+
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+
+}
+
+
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+/* 
+.bg-img {
+    background-image: url('/MyWebsite/media/boss14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+
+} */

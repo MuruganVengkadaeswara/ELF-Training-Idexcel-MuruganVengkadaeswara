@@ -1,0 +1,103 @@
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 40px;
+    opacity: 0.9;
+
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+
+}
+
+
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+/* .card {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 300px;
+    width: 100px;
+    margin-left: 100px;
+    position: absolute;
+    z-index: ;
+} */
+
+.container-fluid {
+    position: absolute;
+    z-index: 2;
+    margin-top: 150px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+
+
+input[type=text],
+input[type=password] {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg-img {
+    background-image: url('/MyWebsite/media/boss6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.form-group {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 1);
+}
+
+#logo1 {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 40px;
+    opacity: 0.9;
+    margin-left: 100px;
+}
+
+#logo1:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+}
+
+.btn {
+    margin-left: 80px;
+}

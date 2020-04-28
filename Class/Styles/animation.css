@@ -1,0 +1,23 @@
+.element {
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    margin: 20px;
+    animation: roll 3s infinite;
+    display: inline-block;
+    /* float: left; */
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

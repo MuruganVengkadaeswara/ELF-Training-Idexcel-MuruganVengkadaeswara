@@ -1,0 +1,181 @@
+.jumbotron {
+    margin-top: 300px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 40px;
+    opacity: 0.9;
+
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+
+}
+
+
+
+li a {
+    font-size: 22px;
+}
+
+#name {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+}
+
+#n2 {
+    font-weight: bold;
+}
+
+.bg-img {
+    background-image: url('/MyWebsite/media/busmann.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+#s {
+    margin-left: -10px;
+    margin-top: 240px;
+    font-size: 350px;
+    font-weight: 10;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: anim 3s infinite;
+}
+
+#st1,
+#st2,
+#st3 {
+    margin-left: 130px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: lighter;
+    font-style: italic;
+    letter-spacing: 6px;
+}
+
+#st2 {
+    margin-top: 400px;
+}
+
+#st1 {
+    margin-top: 450px;
+    /* animation: anim1 2s infinite; */
+}
+
+#st3 {
+    margin-top: 500px;
+}
+
+#boxcon {
+    height: fit-content;
+    width: fit-content;
+    margin-left: 750px;
+    /* padding: 20px; */
+
+}
+
+
+#st3:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
+
+}
+
+#st2:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
+}
+
+#st1:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 1s;
+}
+
+/* #s:hover {
+    transform: rotateY(360deg);
+    transition-duration: 1.5s;
+} */
+
+#foot_icon {
+    position: absolute;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    margin-top: 250px;
+    margin-left: -20px;
+
+}
+
+#foot_icon figure img {
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+}
+
+.icon:hover {
+    transform: rotate(-360deg) scale(2);
+    transition-duration: 0.7s;
+}
+
+#para {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 710px;
+    margin-top: 800px;
+    font-size: large;
+    letter-spacing: 5px;
+    font-style: italic;
+
+}
+
+@keyframes anim {
+    0% {
+        transform: rotateY(0);
+    }
+
+    /* 50% {
+        transform: rotateY(-180deg);
+    } */
+
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+
+@keyframes anim1 {
+    /* 0% {
+        /* transform: scale(1.2, 1.2); */
+
+
+    0% {
+        transform: rotate(-360deg) scale(1.4);
+    }
+}
+
+.bg-text {
+    /* background-color: rgba(0, 0, 0, 0.09); */
+    z-index: 2;
+    position: absolute;
+    padding: 5px;
+    margin-top: 100px;
+    outline: none;
+    color: white;
+}

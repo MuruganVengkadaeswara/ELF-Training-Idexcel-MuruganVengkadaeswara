@@ -1,0 +1,78 @@
+#logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 40px;
+    opacity: 0.9;
+}
+
+#logo1 {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 40px;
+    opacity: 0.9;
+    margin-left: 164px;
+}
+
+#logo:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+}
+
+#logo1:hover {
+    transform: rotate(-360deg) scale(1.2);
+    transition-duration: 0.7s;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg-img {
+    background-image: url("/MyWebsite/media/boss6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+.container-fluid {
+    position: absolute;
+    z-index: 2;
+    /* margin-top: 250px; */
+    margin-left: -100px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 1);
+    font-size: large;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.form-group {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 1);
+}
+
+.btn {
+    margin-left: 160px;
+}
