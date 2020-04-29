@@ -33,7 +33,8 @@ li a {
 
 body,
 html {
-    height: 100%;
+    height: 120%;
+    width: 120%;
 }
 
 .bg-img {
