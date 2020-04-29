@@ -61,6 +61,7 @@ html {
     height: 110%;
     filter: blur(6px);
     -webkit-filter: blur(6px);
+    background-position: center;
 }
 
 
@@ -91,6 +92,7 @@ input[type="email"] {
     border-radius: 40px;
     opacity: 0.9;
     margin-left: 100px;
+    /* position: absolute; */
 }
 
 #logo1:hover {
@@ -100,4 +102,11 @@ input[type="email"] {
 
 .btn {
     margin-left: 80px;
+}
+
+
+
+.nav-link:hover {
+    /* color: rgba(215, 250, 59, 0); */
+    color: white;
 }

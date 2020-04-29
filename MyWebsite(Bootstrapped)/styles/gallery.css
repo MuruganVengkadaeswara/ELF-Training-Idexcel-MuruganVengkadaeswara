@@ -45,7 +45,10 @@ html {
     width: 700px;
     margin-left: 550px;
     margin-top: 200px;
+
 }
+
+
 
 
 img {
@@ -89,4 +92,9 @@ img {
     font-style: italic;
     letter-spacing: 3px;
     color: black;
+}
+
+.nav-link:hover {
+    /* color: rgba(215, 250, 59, 0); */
+    color: white;
 }

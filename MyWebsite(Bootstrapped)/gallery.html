@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="/bootstrap_files/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap_files/fontawesome-free-5.13.0-web/css/all.css">
     <link rel="stylesheet" href="/MyWebsite(Bootstrapped)/styles/gallery.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.html">
-            <img src="/MyWebsite(Bootstrapped)/media/logo.webp" alt="" id="logo">
-        </a>
-
+    <nav class="navbar navbar-expand-lg fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <img src="/MyWebsite(Bootstrapped)/media/logo.webp" alt="" id="logo">
+            </span>
         </button>
-        <li class="nav-item">
-
-        </li>
+        <div class="d-none d-lg-block">
+            <a href="index.html">
+                <img src="/MyWebsite(Bootstrapped)/media/logo.webp" alt="" id="logo">
+            </a>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto">
@@ -48,7 +49,7 @@
         </h2>
 
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7">
         <div id="carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

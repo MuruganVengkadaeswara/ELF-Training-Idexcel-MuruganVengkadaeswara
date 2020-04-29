@@ -48,8 +48,9 @@ html {
 .container-fluid {
     position: absolute;
     z-index: 2;
-    /* margin-top: 250px; */
+    margin-top: 100px;
     margin-left: -100px;
+
 }
 
 .card {
@@ -75,4 +76,9 @@ input[type="email"] {
 
 .btn {
     margin-left: 160px;
+}
+
+.nav-link:hover {
+    /* color: rgba(215, 250, 59, 0); */
+    color: white;
 }

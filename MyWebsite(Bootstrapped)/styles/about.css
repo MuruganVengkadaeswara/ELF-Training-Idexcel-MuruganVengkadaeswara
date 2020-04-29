@@ -1,20 +1,23 @@
 body,
 html {
     height: 100%;
+    overflow: scroll;
 }
 
 .jumbotron {
-    height: 500px;
-    width: 500px;
-    /* position: absolute; */
+    height: 800px;
+    width: 300px;
+    position: absolute;
     z-index: 1;
-    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-color: rgba(0, 0, 0, 0.2);
     /* color: rgb(148, 145, 145); */
     /* z-index: 2; */
     /* background-image: url('/MyWebsite/media/ban1.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     /* filter: blur(); */
+    margin-top: 60px;
+
 
 }
 
@@ -74,13 +77,24 @@ li a {
     font-size: 22px;
 }
 
-/* 
+
 .bg-img {
     background-image: url('/MyWebsite/media/boss14.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 110%;
     filter: blur(6px);
+    background-position: center;
     -webkit-filter: blur(6px);
 
-} */
+}
+
+.container-fluid {
+    position: absolute;
+    /* margin-top: 200px; */
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
