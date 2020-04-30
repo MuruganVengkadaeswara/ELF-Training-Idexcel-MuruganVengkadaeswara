@@ -1,12 +1,12 @@
 body,
 html {
-    height: 100%;
-    overflow: scroll;
+    height: 150%;
+    /* overflow: scroll; */
 }
 
 .jumbotron {
-    height: 800px;
-    width: 300px;
+    /* height: 300px;
+    width: 1000px; */
     position: absolute;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
@@ -16,7 +16,26 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     /* filter: blur(); */
-    margin-top: 60px;
+    margin-top: 160px;
+    /* margin-left: 100px; */
+
+
+}
+
+.jumbotron-fluid {
+    /* height: 300px;
+    width: 1000px; */
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* color: rgb(148, 145, 145); */
+    /* z-index: 2; */
+    /* background-image: url('/MyWebsite/media/ban1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(); */
+    margin-top: 160px;
+    /* margin-left: 100px; */
 
 
 }
@@ -90,11 +109,33 @@ li a {
 }
 
 .container-fluid {
-    position: absolute;
+    /* position: absolute; */
     /* margin-top: 200px; */
 }
 
 .nav-link {
     color: rgba(0, 0, 0, 0.7);
     font-weight: 700;
+}
+
+
+
+#con0 {
+    /* margin-top: 350px; */
+    position: absolute;
+}
+
+#con1 {
+    margin-top: 500px;
+    position: absolute;
+}
+
+#con2 {
+    margin-top: 1100px;
+    position: absolute;
+}
+
+#con3 {
+    margin-top: 1700px;
+    position: absolute;
 }
