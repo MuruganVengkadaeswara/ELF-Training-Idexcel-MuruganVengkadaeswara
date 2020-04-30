@@ -21,34 +21,6 @@ li a {
     font-size: 22px;
 }
 
-/* .card {
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 300px;
-    width: 100px;
-    margin-left: 100px;
-    position: absolute;
-    z-index: ;
-} */
-
-.container-fluid {
-    position: absolute;
-    z-index: 2;
-    margin-top: 150px;
-}
-
-.card {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-
-
-input[type=text],
-input[type=password] {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
 body,
 html {
     height: 120%;
@@ -63,24 +35,6 @@ html {
     filter: blur(6px);
     -webkit-filter: blur(6px);
     background-position: center;
-}
-
-
-
-
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: black;
-}
-
-.form-group {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-::placeholder {
-    color: rgba(0, 0, 0, 1);
 }
 
 #logo1 {
@@ -102,8 +56,4 @@ input[type="email"] {
 .nav-link:hover {
     /* color: rgba(215, 250, 59, 0); */
     color: white;
-}
-
-.btn {
-    margin-left: 80px;
 }
