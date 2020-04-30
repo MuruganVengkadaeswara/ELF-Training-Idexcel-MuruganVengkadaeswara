@@ -1,0 +1,20 @@
+
+create a database -----> company_name_db
+
+create table employee_table
+
+       emp_id (int) -----> (PK)                         (int)/(try serial also)
+       ename(varchar)                                   (text)
+       designation(varchar)                             (text)
+       hiredate(date) -------->  (NOT NULL)             (date)
+       salary(int)                                      (real/float/float8/decimal)
+       age(int)                                         (smallint)
+       email(varchar)                                   (text)   
+       dept_no(int)                                     (smallint)
+       mobile_no(int) --------->   (NOT NULL)           (bigint)
+
+insert 10 records.
+
+dept_no----> 10,20,30,40 only.
+
+designation -----> s/w developer,tester,hr,clerk,salesman.

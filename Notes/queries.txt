@@ -1,0 +1,67 @@
+select version(); --->  gives version
+
+\l ----> list all the database
+
+CREATE DATABASE :
+===================
+create database db_name;  ----> create database
+
+CONNECT:
+===================
+\c testdb  -----> connect to database
+
+\! clear ----> clear terminal ubuntu
+
+\! cls  ------> clear cmd windows
+
+\d   -----> list the relations (describe)
+
+CREATE TABLE:
+==============
+
+create table table_name(attr1/col_1 datatype constraints,attr2/col_2 datatype constraints,attr3/col_3 datatype constraints); ------->  create table
+
+e.g
+create table person(id int pk)
+
+\d table_name -----> details about the table(describe)
+
+ALTER TABLE:
+=========
+alter table table_name add col_name/attr_name datatype; -----> alter the table (add col)
+
+alter table table_name drop col_name/attr_name; -----> alter the table (drop col)
+
+RENAME A COLUMN_NAME:
+=====================
+
+alter table table_name rename col_name/attr_name to col_name/attr_name(new); -----> alter the table (rename col)
+
+RENAME A TABLE:
+=====================
+
+alter table table_name rename to table_name(new);  ------> renames the table
+
+RENAME DATABASE:
+===================== 
+
+alter database db_name to db_name(new);
+{cant rename while working on current database}
+
+DROP TABLE:
+==============
+
+drop table table_name;
+
+++++++
+DML: +
+++++++
+
+INSERT 
+=======
+
+insert into table_name (col_name1,col_name2,col_name3) values (value1,value2,value3);
+
+(or)
+
+insert into table_name values (value1,value2,value3);
