@@ -1,49 +1,26 @@
 body,
 html {
     height: 150%;
-    /* overflow: scroll; */
 }
 
 .jumbotron {
-    /* height: 300px;
-    width: 1000px; */
     position: absolute;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
-    /* color: rgb(148, 145, 145); */
-    /* z-index: 2; */
-    /* background-image: url('/MyWebsite/media/ban1.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: blur(); */
     margin-top: 160px;
-    /* margin-left: 100px; */
-
-
 }
 
 .jumbotron-fluid {
-    /* height: 300px;
-    width: 1000px; */
+    width: 1000px;
     position: absolute;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
-    /* color: rgb(148, 145, 145); */
-    /* z-index: 2; */
-    /* background-image: url('/MyWebsite/media/ban1.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: blur(); */
     margin-top: 160px;
-    /* margin-left: 100px; */
-
-
 }
-
-/* .row {
-    padding-left: 100px;
-    padding-top: 50px;
-} */
 
 .fa-graduation-cap {
     color: rgb(15, 187, 240);
@@ -108,10 +85,7 @@ li a {
 
 }
 
-.container-fluid {
-    /* position: absolute; */
-    /* margin-top: 200px; */
-}
+
 
 .nav-link {
     color: rgba(0, 0, 0, 0.7);
@@ -121,7 +95,6 @@ li a {
 
 
 #con0 {
-    /* margin-top: 350px; */
     position: absolute;
 }
 

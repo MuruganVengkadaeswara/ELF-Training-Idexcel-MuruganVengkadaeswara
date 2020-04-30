@@ -44,7 +44,6 @@ html {
 #carousel {
     height: 400px;
     width: 700px;
-    /* margin-left: 550px; */
     margin-top: 200px;
 
 }
@@ -96,6 +95,5 @@ img {
 }
 
 .nav-link:hover {
-    /* color: rgba(215, 250, 59, 0); */
     color: white;
 }

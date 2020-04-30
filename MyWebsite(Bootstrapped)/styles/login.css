@@ -21,14 +21,6 @@ li a {
     font-size: 22px;
 }
 
-/* .card {
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 300px;
-    width: 100px;
-    margin-left: 100px;
-    position: absolute;
-    z-index: ;
-} */
 
 .container-fluid {
     position: absolute;
@@ -100,7 +92,6 @@ input[type="email"] {
 
 
 .nav-link:hover {
-    /* color: rgba(215, 250, 59, 0); */
     color: white;
 }
 

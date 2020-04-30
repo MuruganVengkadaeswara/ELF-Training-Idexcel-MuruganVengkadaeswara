@@ -92,14 +92,7 @@ li a {
     margin-top: 500px;
 }
 
-#boxcon {
-    /* height: fit-content; */
-    /* width: fit-content; */
-    /* margin-left: 50px; */
-    /* padding: 20px; */
-    /* background-position: center; */
 
-}
 
 
 #st3:hover {
@@ -118,10 +111,7 @@ li a {
     transition-duration: 1s;
 }
 
-/* #s:hover {
-    transform: rotateY(360deg);
-    transition-duration: 1.5s;
-} */
+
 
 
 .icon:hover {
@@ -135,7 +125,6 @@ li a {
     z-index: 1;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* margin-left: 710px; */
     margin-top: 600px;
     font-size: large;
     letter-spacing: 5px;
@@ -147,23 +136,18 @@ li a {
 
 
 .bg-text {
-    /* background-color: rgba(0, 0, 0, 0.09); */
     z-index: 1;
     position: absolute;
-    /* padding: 5px; */
-    /* margin-top: 100px; */
     outline: none;
     color: white;
 }
 
 
 .navbar-toggler-icon {
-    /* border: 3px solid white; */
     border-radius: 5px;
 }
 
 .nav-link:hover {
-    /* color: rgba(215, 250, 59, 0); */
     color: white;
 }
 
