@@ -188,3 +188,32 @@ li a {
     /* color: rgba(215, 250, 59, 0); */
     color: white;
 }
+
+#foot_icon {
+    position: absolute;
+    z-index: 1;
+    margin-top: 330px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+
+
+
+
+.icon {
+    height: 60px;
+    width: 60px;
+}
+
+#foot_icon1 {
+    position: absolute;
+    z-index: 1;
+    margin-top: 700px;
+    margin-left: 0px;
+    padding-left: 50px;
+}
+
+#foot_icon1 figure img {
+    padding: 10px;
+}
