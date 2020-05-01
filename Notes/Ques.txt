@@ -7,7 +7,7 @@ create table employee_table
        ename(varchar)                                   (text)
        designation(varchar)                             (text)
        hiredate(date) -------->  (NOT NULL)             (date)
-       salary(int)                                      (real/float/float8/decimal)
+       salary(int)                                      (real/float/float8/decimal/number(P,S))
        age(int)                                         (smallint)
        email(varchar)                                   (text)   
        dept_no(int)                                     (smallint)
@@ -18,3 +18,28 @@ insert 10 records.
 dept_no----> 10,20,30,40 only.
 
 designation -----> s/w developer,tester,hr,clerk,salesman.
+
+
+ANSWER
+========
+
+create database idexcel_db;
+
+\c idexcel_db
+
+create table empl(
+    emp_id int PRIMARY KEY,
+    ename text,
+    designation text,
+    hiredate date NOT NULL,
+    salary real,
+    age smallint,
+    email text,
+    dept_no smallint,
+    mobile_no bigint NOT NULL);
+
+INSERT
+========
+
+insert into empl values(001,'Murugan Vengkadaeswara','software developer','2020-03-03',25000.00,22,'muruganvengkadaeswara@gmail.com',30,1231123121);
+

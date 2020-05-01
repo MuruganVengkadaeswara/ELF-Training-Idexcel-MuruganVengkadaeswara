@@ -1,0 +1,213 @@
+                                  HTML NOTES
+                               ==================
+
+->The abbrevation of HTML is Hyper Text Markup Language.
+->In 1991 Tim Berners Lee introduced html1.
+->In 1995 he published html2.
+->In 1999 he published html4.
+->Html5 came into the picture in the year 2014.
+->Html is used to structure the web page.
+
+
+->Basic structure of html
+---------------------------
+<HTML>
+	<HEAD>
+		<TITLE>
+		
+		</TITLE>
+	</HEAD>
+	<BODY>
+	
+	</BODY>
+</HTML>
+
+
+->Tags
+-----------
+	It is the keyword or reserved word enclosed within a angular bracket.
+		Ex-<html>,<head>,<body>,etc...
+	It is used to give instructions to the browser.
+
+
+->There are 2 types of tags
+
+	a)Paired tag	
+	b)Unpaired tag
+
+	a)Paired tag ->It contains both start and end tag.It is also called as Container tag.
+	  Ex-<html>.....</html>
+	b)Unpaired tag ->It contains only start tag.It is also called as Empty tag/Self closing tag.
+	  Ex-<br>,<img>,etc.
+  
+
+->Elements
+--------------
+The content within opening and closing tag are called as elements.
+ Ex- <p>Friends Forever</p>
+
+
+->Basic tags
+---------------
+  Tag 	                      Description
+<!DOCTYPE>  	         Defines the document type
+<html> 	                 Defines an HTML document
+<head> 	                 Defines information about the document
+<title> 	             Defines a title for the document
+<body> 	                 Defines the document's body
+<h1>to<h6> 	             Defines HTML headings
+<p> 	                 Defines a paragraph
+<br> 	                 Inserts a single line break
+<!--...--> 	             Defines a comment
+
+
+->Attributes
+---------------
+It provides additional information about an element.
+They are always specified in the start tag.
+Attributes usually comes in name/value pair.
+Ex-<p align="left>.....</p>
+
+There are 4 types of attributes:
+a)id =Specifies a unique id for an element.
+  Ex-<p id="idname">........</p>
+b)title=Specifies extra information about an element.
+  Ex- <p title="Html notes">.............</p> 
+c)class=Specifies one or more classnames for an element (refers to a class in a style sheet).
+  Ex-<p class="classname1 classname2 classname3">.......</p>
+d)style=The style attribute is used to specify the styling of an element, like color, font, size etc.
+  Ex- <p style="color:red">........</p> 
+  
+
+->Grouping Elements
+---------------------
+Block-Level Elements
+
+A block-level element always starts on a new line and takes up the full width available(stretches out to the left and right as far as it can).
+The <div> element is a block-level element.
+The <div> element is often used as a container for other HTML elements.
+The <div> tag takes up the entire width of the screen.
+Ex-<div>Hello World</div>.
+
+Inline Elements
+
+An inline element does not start on a new line and only takes up as much width as necessary.
+This is an inline <span> element inside a paragraph.
+The <span> element is often used as a container for some text.
+The <span> tag conforms to the width of whatever element it contains.
+Ex-<span>Hello World</span>.
+
+
+->Lists
+----------
+Each list item starts with the <li> tag.
+There are 4 types of lists in html
+a)Ordered List
+b)Unordered List
+c)Definition List
+d)Nested List
+
+a)Ordered List
+----------------
+An ordered list starts with the <ol> tag.
+Type	                     Description
+type="1"	   The list items will be numbered with numbers(default).
+type="A"	   The list items will be numbered with uppercase letters.
+type="a"	   The list items will be numbered with lowercase letters.
+type="I"	   The list items will be numbered with uppercase roman numbers.
+type="i"	   The list items will be numbered with lowercase roman numbers.
+
+b)Unordered List
+An unordered list starts with the <ul> tag.
+Type	      Description
+disc	   Sets the list item marker to a bullet(default).
+circle	   Sets the list item marker to a circle.
+square	   Sets the list item marker to a square.
+none	   The list items will not be marked.
+
+c)Definition List
+Type           Description
+<dl>        defines start of the list.
+<dt>        definition term.
+<dd>        defining defination.
+
+d)Nested List
+A nested list is a list within a list.
+
+
+->Anchors and Hyperlinks
+Anchor tag
+Html uses the <a>(anchor) tag to create a link to another document.
+An anchor tag can point to any resource on the Web.
+Syntax-<a href="url">.....</a>
+
+Href Attribute
+It is used to address the document to link to,and the content between the open and close of the anchor tag will be displayed as a hyperlink.
+
+
+->Image Handling
+<img src = "image-file.jpg">
+where img=name
+      src=Attribute
+	  image-file.jpg=value
+
+
+->Tables
+The html tables allows us to arrange the data into rows and columns.
+Html tables are created using the <table> tag.
+Table row is definied using <tr> tag.
+Table header is defined using <th> tag.
+Table data/cell is definedusing <td> tag.
+
+
+->Forms
+The <form> tag is used to create an HTML form for user input.
+The <form> element can contain one or more of the following form elements:
+<input>,<textarea>,<button>,<select>,<option>,<optgroup>,<fieldset>,<label>,<output>
+Syntax-<form action="Script URL" method="GET/POST">......</form>
+
+->Form Controls
+There are different types of form controls that you can use to collect data using HTML form −
+1.Text Input Controls
+2.Checkboxes Controls
+3.Radio Box Controls
+4.Select Box Controls
+5.File Select boxes
+6.Hidden Controls
+7.Clickable Buttons
+8.Submit and Reset Button
+
+->Form input types
+Here are the different input types you can use in HTML:
+
+1.<input type="button"> defines a button.
+2.<input type="checkbox"> defines a checkbox.Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+3.<input type="color"> is used for input fields that should contain a color.
+4.<input type="date"> is used for input fields that should contain a date.
+5.<input type="datetime-local"> specifies a date and time input field, with no time zone.
+6.<input type="email">  is used for input fields that should contain an e-mail address.
+7.<input type="file"> defines a file-select field and a "Browse" button for file uploads.
+8.<input type="month"> allows the user to select a month and year.
+9.<input type="number"> defines a numeric input field.
+10.<input type="password"> defines a password field.
+11.<input type="radio"> defines a radio button.Radio buttons let a user select ONLY ONE of a limited number of choices.
+12.<input type="range">  defines a control for entering a number whose exact value is not important (like a slider control).Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes.
+13.<input type="reset"> defines a reset button that will reset all form values to their default values.
+14.<input type="search"> is used for search fields (a search field behaves like a regular text field).
+15.<input type="submit"> defines a button for submitting form data to a form-handler.
+16.<input type="tel"> is used for input fields that should contain a telephone number.
+17.<input type="text"> defines a single-line text input field.
+18.<input type="time"> allows the user to select a time (no time zone).
+19.<input type="url"> is used for input fields that should contain a URL address.
+20.<input type="week"> allows the user to select a week and year.
+
+
+
+
+
+
+
+
+
+
+
