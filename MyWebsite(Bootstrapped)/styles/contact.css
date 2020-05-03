@@ -21,10 +21,25 @@ li a {
     font-size: 22px;
 }
 
-body,
-html {
-    height: 120%;
-    width: 120%;
+@media only screen and (max-width: 900px) {
+
+    body,
+    html {
+        height: 120%;
+        width: 120%;
+        /* overflow: scroll; */
+    }
+}
+
+@media only screen and (min-width: 500px) {
+
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+        /* overflow: scroll; */
+    }
+
 }
 
 .bg-img {
@@ -60,7 +75,7 @@ html {
 .card {
     position: absolute;
     z-index: 1;
-    margin-top: 300px;
+    margin-top: 200px;
     background-color: rgba(0, 0, 0, 0.2);
     height: 420px;
 }

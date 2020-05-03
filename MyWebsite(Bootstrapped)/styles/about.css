@@ -1,6 +1,22 @@
-body,
-html {
-    height: 150%;
+@media only screen and (max-width: 900px) {
+
+    body,
+    html {
+        height: 200%;
+        width: 120%;
+        /* overflow: scroll; */
+    }
+}
+
+@media only screen and (min-width: 500px) {
+
+    body,
+    html {
+        height: 150%;
+        width: 100%;
+        /* overflow: scroll; */
+    }
+
 }
 
 .jumbotron {

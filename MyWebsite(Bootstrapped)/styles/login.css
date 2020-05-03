@@ -7,6 +7,27 @@
 
 }
 
+@media only screen and (max-width: 900px) {
+
+    body,
+    html {
+        height: 120%;
+        width: 120%;
+        /* overflow: scroll; */
+    }
+}
+
+@media only screen and (min-width: 500px) {
+
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+        /* overflow: scroll; */
+    }
+
+}
+
 #logo:hover {
     transform: rotate(-360deg) scale(1.2);
     transition-duration: 0.7s;
@@ -41,11 +62,6 @@ input[type=password] {
     color: white;
 }
 
-body,
-html {
-    height: 120%;
-    width: 120%;
-}
 
 .bg-img {
     background-image: url('/MyWebsite(Bootstrapped)/media/boss6.jpg');
