@@ -65,3 +65,125 @@ insert into table_name (col_name1,col_name2,col_name3) values (value1,value2,val
 (or)
 
 insert into table_name values (value1,value2,value3);
+
+(or)
+
+insert into table_name values (value1,value2,value3),(value1,value2,value3);
+
+
+++++++
+DQL: +
+++++++
+Data Query Language
+====================
+3 different ways to retrieve data from table
+
+    1.Projection
+    2.Selection
+    3.Join
+
+1.Projection:
+    get column data. 
+
+2.Selection:
+    get row and column data.
+
+3.Join:
+    retrieval of data from multiple tables.
+
+clause ----> every clause will get some input arguments.
+
+
+syntax:
+=======
+
+SELECT */[DISTINCT] col_name/expression[alias]
+FROM table_name;
+
+SELECT * 
+FROM employee_info; 
+(This is Selection)
+
+1st FROM will execute and search the table and put it under execution.
+Input for FROM--->table_name.
+
+SELECT will prepare the result set.
+Input for SELECT-->(* ---> Wild card character.)
+
+Order of execution.(Without WHERE)
+
+    i.FROM
+    ii.SELECT
+
+SELECT ename 
+FROM employee_info;
+(This is Projection)
+
+SELECT ename,salary 
+FROM employee_info;
+(This is Projection)
+
+Question:
+========
+Write a query to insert more than one record in same statement?
+
+ans:
+
+insert into table_name values (value1,value2,value3),(value1,value2,value3);
+
+
+Write a query to display ename,dept_no,hiredate ?
+
+ans:
+
+select ename,dept_no,hiredate from employee_info;
+
+UPDATE:
+=========
+
+UPDATE table_name set col_name/attr_name=value; (changes every record on column)
+
+or
+
+UPDATE table_name set col_name/attr_name=value WHERE condition; (changes if condition is met)
+
+
+update employee_info set salary=9000 WHERE ename='Chandru';
+
+
+WHERE clause:
+---------------
+syntax
+=========
+
+SELECT * 
+FROM table_name
+WHERE condition;
+
+WHERE is used to filter the result-set.
+
+WHERE can be used with SELECT , UPDATE , DELETE.
+
+update emplo set age = 22 where name='abc'; //Dummy Table
+
+delete from emplo where age=22;
+
+WHERE executes row by row.
+
+(it is part of Selection)
+
+Order of execution.(With WHERE)
+
+    i.FROM
+    ii.WHERE
+    iii.SELECT
+
+
+
+
+DELETE:
+=========
+
+DELETE FROM table_name;
+
+DELETE FROM table_name WHERE condition;
