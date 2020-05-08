@@ -1,0 +1,604 @@
+1.W.A.Q to get the version of postgresql?
+
+    select version(); --->  gives version
+
+2.W.A.Q to list all the databases?
+
+    \l ----> list all the database
+
+++++++++++++++++++++++++++++++
+DDL:DATA DEFINITION LANGUAGE +
+++++++++++++++++++++++++++++++
+
+            CREATE DATABASE :
+            ===================
+            3.W.A.Q to create a database?
+                    
+                    create database db_name;  ----> create database
+
+            CONNECT:
+            ===========
+
+            4.W.A.Q to connect to a database?
+
+                \c testdb  -----> connect to database.
+
+            5.W.A.Q to clear the terminal/cmd?
+                
+                \! clear ----> clear terminal ubuntu.
+
+                \! cls  ------> clear cmd windows
+
+            6.W.A.Q to describe the relations present in the database?
+
+                \d   -----> list the relations 
+
+            7.W.A.Q to describe the table?
+
+                \d table_name
+
+            CREATE TABLE:
+            ==============
+            8.W.A.Q to create a table?
+
+                create table table_name(attr1/col_1 datatype constraints,attr2/col_2 datatype constraints,attr3/col_3 datatype constraints); ------->  create table
+
+                e.g
+                    create table person(id int pk,sal real);
+
+
+            ALTER TABLE:
+            ============
+            9.How to alter the table structure?
+            
+                i)W.A.Q to add a new column?
+
+                    alter table table_name add col_name/attr_name datatype constraints; -----> alter the table 
+                
+                ii)W.A.Q to remove/delete a column?
+            
+                    alter table table_name drop col_name/attr_name; -----> alter the table
+
+            RENAME A COLUMN_NAME:
+            =====================
+
+            10.W.A.Q to rename a column/attribute ?
+
+                alter table table_name RENAME col_name/attr_name TO new_col_name/new_attr_name; -----> alter the table (rename col)
+
+            RENAME A TABLE:
+            =====================
+
+            11.W.A.Q to rename a table?
+
+                alter table table_name RENAME TO table_name(new);  ------> renames the table
+
+            RENAME DATABASE:
+            ===================== 
+
+            12.W.A.Q to rename a database?
+
+                alter database db_name to db_name(new);
+
+                NOTE: {cant rename a while working on current database}
+
+            DROP TABLE:
+            ==============
+
+            13.W.A.Q to drop a table?
+
+                drop table table_name;
+
+ASSIGNMENT
+===========
+
+                create a database -----> company_name_db
+
+                create table employee_table
+
+                    emp_id (int) -----> (PK)                         (int)/(try serial also)
+                    ename(varchar)                                   (text)
+                    designation(varchar)                             (text)
+                    hiredate(date) -------->  (NOT NULL)             (date)
+                    salary(int)                                      (real/float/float8/decimal/number(P,S))
+                    age(int)                                         (smallint)
+                    email(varchar)                                   (text)   
+                    dept_no(int)                                     (smallint)
+                    mobile_no(int) --------->   (NOT NULL)           (bigint)
+
+                insert 10 records.
+
+                dept_no----> 10,20,30,40 only.
+
+                designation -----> s/w developer,tester,hr,clerk,salesman.
+
+
+                ANSWER
+                ========
+
+                create database idexcel_db;
+
+                \c idexcel_db
+
+                create table empl(
+                    emp_id int PRIMARY KEY,
+                    ename text,
+                    designation text,
+                    hiredate date NOT NULL,
+                    salary real,
+                    age smallint,
+                    email text,
+                    dept_no smallint,
+                    mobile_no bigint NOT NULL);
+
+                INSERT
+                ========
+
+                insert into empl values(001,'Murugan Vengkadaeswara','software developer','2020-03-03',25000.00,22,'muruganvengkadaeswara@gmail.com',30,1231123121);
+
+
+
++++++++++++++++++++++++++++++++++
+DML: DATA MANIPULATION LANGUAGE +
++++++++++++++++++++++++++++++++++
+
+            INSERT 
+            =======
+
+            14.W.A.Q to insert data in to the table?
+
+                insert into table_name (col_name1,col_name2,col_name3) values (value1,value2,value3);
+
+                (or)
+
+                insert into table_name values (value1,value2,value3);
+
+                (or)
+
+                insert into table_name values (value1,value2,value3),(value1,value2,value3);
+
+//TO CHECK THE INSERTED DATA
+
+++++++++++++++++++++++++++
+DQL: Data Query Language +
+++++++++++++++++++++++++++
+
+            There are 3 different ways to retrieve data from table
+
+            1.Projection
+            2.Selection
+            3.Join
+
+            1.Projection:
+                gets column data. 
+
+            2.Selection:
+                gets row and column data based on Selection.
+
+            3.Join:
+                retrieval of data from multiple tables.
+
+            clause ----> every clause will get some input arguments.
+
+
+            syntax:
+            =======
+          
+            SELECT */[DISTINCT] col_name/expression[alias]
+            FROM table_name;
+
+            15.W.A.Q to display all the employee_info?
+
+                    SELECT * 
+                    FROM employee_info; 
+                    (This is Selection)
+
+            1st FROM will execute and search the table and put it under execution.
+            Input for FROM--->table_name.
+
+            SELECT will prepare the result set.
+            Input for SELECT-->(* ---> Wild card character.)
+
+            Order of execution.(Without WHERE)
+
+                i.FROM
+                ii.SELECT
+
+            16.W.A.Q to display ename from employee_info table?
+
+                SELECT ename 
+                FROM employee_info;
+                (This is Projection)
+
+            17.W.A.Q to display ename,salary from employee_info table?
+               
+                SELECT ename,salary 
+                FROM employee_info;
+                (This is Projection)
+
+        Question:
+        =========
+            18.Write a query to insert more than one record in same statement?
+
+                 insert into table_name values (value1,value2,value3),(value1,value2,value3);
+
+       
+            19.Write a query to display ename,dept_no,hiredate ?
+
+
+                 select ename,dept_no,hiredate from employee_info;
+
+        UPDATE:
+        =========
+
+            syntax:
+            -------
+                UPDATE table_name set col_name/attr_name=value; (changes every record on column)
+
+                (or)
+
+                UPDATE table_name set col_name/attr_name=value WHERE condition; (changes if condition is met)    
+
+            20. W.A.Q to update the salary in employee table ?
+
+                update employee_info set salary=9000 WHERE ename='Chandru';
+
+
+    WHERE clause:
+    ---------------
+            syntax
+            =========
+
+            SELECT * 
+            FROM table_name
+            WHERE condition;
+
+            *.WHERE is used to filter the result-set/records.
+
+            *.WHERE can be used with SELECT , UPDATE , DELETE.
+
+            *.update emplo set age = 22 where name='abc'; //Dummy Table
+
+            *.delete from emplo where age=22;
+
+            *.WHERE executes row by row.
+
+            *.(it is part of Selection)
+
+            Order of execution.(With WHERE)
+
+                i.FROM
+                ii.WHERE
+                iii.SELECT
+
+
+
+
+    DELETE:
+    =========
+    syntax
+    -------
+    DELETE FROM table_name;
+    (or)
+    DELETE FROM table_name WHERE condition;
+
+
+    W.A.Q to delete a record whose employee id is 9?
+        
+    delete from employee_info where emp_id=9;
+
+
+
+Expression:
+===========
+
+    Expression consists of operators and operands. 
+    it is the statement which helps us to give a result.
+
+        x+y=z
+
+    operands : 
+            operands are 2 types
+
+            i)  column_name/attr_name.
+            ii) literals.
+
+                Literals : 
+                    
+                    The direct value or real value used in the SQL Statement / Expression.
+
+                    further divided in to 3 types.
+
+                        i) Number - the direct value used for number types is known as number literals.
+
+                        ii) Character - the direct value used for character is known as character literal.
+
+                            (while giving character we use '' ---> 'Mv')
+
+                        iii) Date - the direct value used for date is known as date literal.
+
+                            (while giving Date we use ''  ---> 'YYYY-MM-DD')
+    
+    operators :
+            operators are some reserved words / character .
+
+            4 types
+                i)Arithmetic operators (+, -, *, /, % )
+                    
+
+                ii)Comparison operators
+
+                iii)Logical operators
+
+                iv)Special operators
+
+    
+    ALIAS
+    ======
+
+        used to give a table/column in a table a temperory column_name/attr_name.
+        used for readability purpose.
+
+    syntax:
+    -------
+        SELECT col_name/attr_name AS alias_name_col FROM table_name AS alias_name_table;
+        
+        (or)
+
+        SELECT col_name/attr_name  alias_name_col FROM table_name  alias_name_table;
+
+
+        ASSIGNMENT:
+        ============
+            1.W.A.Q to display designation with alias_name as jobtype?
+                
+                select designation as jobtype from employee_info;
+
+            
+            2.W.A.Q to obtain employee name with his current salary and new salary with 25% hike?
+            
+                select ename,salary as current_salary,salary+(salary*0.25) as New_salary from employee_info;
+
+            3.W.A.Q to display all the records of employee with salary increment of 500? 
+
+                select *,salary+500 as increment from employee_info; 
+
+                (or)
+                
+                select employee_info.*,salary+500 as increment from employee_info;
+
+
+            4.W.A.Q to display all the records of employee with salary decrement of 500?
+
+                select *,salary-500 as decrement from employee_info;
+
+                (or)
+
+                select employee_info.*,salary-500 as decrement from employee_info;
+
+            5.W.A.Q to display name salary and annual salary of all the employee?
+                
+                select *,salary*12 annual_salary from employee_info;
+
+                (or)
+
+                select employee_info.*,salary*12 annual_salary from employee_info;
+
+
+
+            6.W.A.Q to display per_day salary of all the employee?         
+
+                select salary/30 as per_day_salary from employee_info;
+
+
+    DISTINCT
+    ========
+        Distinct is used to eliminate the duplicates/used to return different result set.
+
+        syntax:
+        -------
+        SELECT DISTINCT col_name FROM table_name;
+
+        NOTE: giving more than one col_name for distinct will return combination of unique/distinct values.
+              or it will remove the combination of duplicates.
+
+        1. W.A.Q to display distinct designation from employee table?
+
+            select distinct designation from employee_info;
+
+        2. W.A.Q to display distinct dept_no and designation?
+
+            select distinct dept_no,designation from employee_info;
+
+    
+    Comparison operators:
+    ---------------------
+        =  - equals
+        <  - less than
+        >  - greater than   
+        >= - less than or equal to
+        <= - greater than or equal to
+        != - not equals
+        <> - not equals
+
+        3. W.A.Q to display details of employee with dept_no is 10?
+            
+            select * from employee_info where dept_no=10;
+
+        4. W.A.Q to display details of employee with salary > 20000?
+
+            select * from employee_info where salary>20000;
+
+        5. W.A.Q to display details of employee with salary < 20000?
+
+             select * from employee_info where salary<20000;   
+
+        6. W.A.Q to display details of employee with salary >= 10000?    
+
+             select * from employee_info where salary>=10000;
+
+        7. W.A.Q to display details of employee with salary <= 30000?
+
+             select * from employee_info where salary<=30000;
+
+        8. W.A.Q to display details of employee with salary not equals to 10000?
+
+             select * from employee_info where salary<>10000;
+
+             (or)
+
+             select * from employee_info where salary!=20000;
+
+    Logical operators:
+    ==================
+
+        Logical operators are 
+
+        AND :  (all the conditions must be true for output to be true)
+               (Displays the records if and only if all the conditions are true)
+
+            syntax
+            ------
+            SELECT * FROM table_name WHERE  condition1 AND condition2 AND conditionN; 
+
+            1. W.A.Q to display record of employee working as HR and in dept_no 10?
+
+                select * from employee_info where designation = 'HR' AND dept_no=10;
+
+            2. W.A.Q to display all the records of the employee who is a salesman and hiredate is after 2016?
+
+                select * from employee_info where designation = 'salesman' and hiredate>'2016-12-31';    
+            
+            3. W.A.Q to display who is HR in dept_no 10 only if salary is greater than 25000?
+
+                select * from employee_info where designation = 'HR' AND dept_no=10 AND salary>25000;
+        
+        OR : (if anyone condition is true then the output is true / No need to check other conditions)
+             (Displays the records if any one condition is true)
+            syntax
+            ------
+            SELECT * FROM table_name WHERE  condition1 OR condition2 OR conditionN; 
+
+            4. W.A.Q to display details of employee working in dept_no 10,20?
+
+                select * from employee_info where dept_no=10 or dept_no=20;
+
+            5. W.A.Q to display name,salary,dept_no who is working as a tester or whose salary = 15000?
+
+                select ename,salary,dept_no from employee_info where designation = 'tester' or salary=15000;
+
+            ASSIGNMENT
+            ==========
+
+            6. W.A.Q to display name of all the employee working as tester as well as working in dept_no 20 or clerk whose salary <= 15000?
+
+                select ename from employee_info where (designation = 'tester' and dept_no=20) or (designation='clerk' and salary<=15000);
+           
+            ==========
+
+        NOT :  (Displays the record if the condition is not true)
+
+             syntax
+             ------
+             SELECT * FROM table_name WHERE NOT condition;
+
+            7. W.A.Q to display employee details who is not in dept_no 10?
+
+                select * from employee_info where NOT dept_no=10;
+
+    order of execution if all the 3 Logical  operators are present
+
+        1.NOT
+        2.AND
+        3.OR    
+
+
+
+        1. W.A.Q to display all the records of employee excluding HR who is working in dept_no 30?
+
+            select * from employee_info where not (designation = 'HR' and dept_no = 30);
+
+        2. W.A.Q to display all the employee who is hired after jan 2015 working as tester in dept 20 or hired before 2015?
+
+            select * from employee_info where (hiredate>'2015-01-31' and designation = 'tester' and dept_no=20) or hiredate<'2015-01-01';
+
+        3. W.A.Q to display all the records of employee working in dept_no 10 or 30 or 40 or 50 or 60?
+
+            select * from employee_info where  dept_no = 10 or dept_no=30 or dept_no=40 ;
+
+            (or)
+
+            select * from employee_info where dept_no IN (10,30,40);
+
+    Special operators:
+    ==================
+    Special operators are the operators with some Special functionalities.
+
+       + IN - This operator will accept multiple values for same column and returns true if the value is present.
+
+            syntax
+            ------
+                SELECT * FROM table_name WHERE col_name IN (value1,value2,..,valueN);
+
+        4. W.A.Q to display all the records of employee who is working as salesman,manager or admin?
+
+             select * from employee_info where designation IN('salesman','manager','admin');
+
+       + NOT IN -  This operator will accept multiple values for same column and returns false if the value is present.
+
+            syntax
+            ------
+               SELECT * FROM table_name WHERE col_name NOT IN (value1,value2,..,valueN);
+
+        5. W.A.Q to display all the details of employee working in dept_no 50,30,40 excluding salesman and hr?
+
+                select * from employee_info where dept_no IN (50,40,30) and designation NOT IN ('salesman','HR');
+
+        
+       + BETWEEN - it accepts lower limit and upper limit for a column name.
+                  it has 3 inputs.(column,lower_limit,upper_limit)  
+
+            syntax
+            ------
+               SELECT * FROM table_name where col_name BETWEEN lower_limit AND upper_limit; 
+
+
+        6. W.A.Q to display all the records of the employee whose salary range within 20000 to 40000?
+
+                select * from employee_info where salary > 20000 and salary < 40000;
+
+        7. W.A.Q to display details of employee who were hired during 2014.?
+
+              select * from employee_info where hiredate between '2014-01-01' and '2014-12-31';      
+
+        8. W.A.Q to display ename,salary of the employee who are working in dept_no 10,20 and their annual salary between 40000 and 50000?
+
+              select ename,salary from employee_info where dept_no in (10,20) and salary*12 between 40000 and 50000;
+        
+       + NOT BETWEEN - it accepts lower limit and upper limit for a column name.
+                      it has 3 inputs.(column,lower_limit,upper_limit) 
+
+            syntax
+            ------
+                SELECT * FROM table_name where col_name NOT BETWEEN lower_limit AND upper_limit;
+
+        
+        9. W.A.Q to display all the records of the employee excluding those who are hired in 2017?
+
+                select * from employee_info where hiredate NOT BETWEEN '2017-01-01' and '2017-12-31';
+
+
+       + IS - it is used to check only the NULL values and return record with NULL values.
+
+            NULL means nothing / holds no value --- (not 0 , not empty string, not blank space)
+            any operation made with NULL results in NULL. (a+NULL =NULL etc.,)
+
+            syntax
+            -------
+               SELECT * FROM table_name WHERE col_name IS NULL;
+
+        + IS NOT - it is used to check only the NULL values and record with return NOT NULL values.
+           
+            syntax
+            -------
+               SELECT * FROM table_name WHERE col_name IS NOT NULL;
