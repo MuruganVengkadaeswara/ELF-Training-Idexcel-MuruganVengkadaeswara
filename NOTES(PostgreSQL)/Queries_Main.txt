@@ -1,0 +1,291 @@
+1.W.A.Q to get the version of postgresql?
+
+    select version(); --->  gives version
+
+2.W.A.Q to list all the databases?
+
+    \l ----> list all the database
+
+3.W.A.Q to create a database?
+                    
+    create database db_name;  ----> create database
+
+4.W.A.Q to connect to a database?
+
+    \c testdb  -----> connect to database.
+
+5.W.A.Q to clear the terminal/cmd?
+                
+    \! clear ----> clear terminal ubuntu.
+
+    \! cls  ------> clear cmd windows
+
+6.W.A.Q to describe the relations present in the database?
+
+    \d   -----> list the relations 
+
+ 7.W.A.Q to describe the table?
+
+    \d table_name
+
+8.W.A.Q to create a table?
+
+    create table table_name(attr1/col_1 datatype constraints,attr2/col_2 datatype constraints,attr3/col_3 datatype constraints); ------->  create table
+
+    e.g
+    
+    create table person(id int pk,sal real);
+
+9.How to alter the table structure?
+            
+    i)W.A.Q to add a new column?
+
+        alter table table_name add col_name/attr_name datatype constraints; -----> alter the table 
+                
+    ii)W.A.Q to remove/delete a column?
+            
+        alter table table_name drop col_name/attr_name; -----> alter the table
+
+        
+10.W.A.Q to rename a column/attribute ?
+
+    alter table table_name RENAME col_name/attr_name TO new_col_name/new_attr_name; -----> alter the table (rename col)
+
+11.W.A.Q to rename a table?
+
+    alter table table_name RENAME TO table_name(new);  ------> renames the table
+
+ 12.W.A.Q to rename a database?
+
+    alter database db_name to db_name(new);
+
+13.W.A.Q to drop a table?
+
+    drop table table_name;
+
+14.W.A.Q to insert data in to the table?
+
+    insert into table_name (col_name1,col_name2,col_name3) values (value1,value2,value3);
+
+    (or)
+
+    insert into table_name values (value1,value2,value3);
+
+    (or)
+
+    insert into table_name values (value1,value2,value3),(value1,value2,value3);
+
+15.W.A.Q to display all the employee_info?
+
+    SELECT * 
+    FROM employee_info; 
+    (This is Selection)
+
+16.W.A.Q to display ename from employee_info table?
+
+    SELECT ename 
+    FROM employee_info;
+    (This is Projection)
+
+17.W.A.Q to display ename,salary from employee_info table?
+               
+    SELECT ename,salary 
+    FROM employee_info;
+    (This is Projection)
+
+18.Write a query to insert more than one record in same statement?
+
+    insert into table_name values (value1,value2,value3),(value1,value2,value3);
+
+       
+19.Write a query to display ename,dept_no,hiredate ?
+
+    select ename,dept_no,hiredate from employee_info;
+
+20. W.A.Q to update the salary in employee table ?
+
+    update employee_info set salary=9000 WHERE ename='Chandru';
+
+21. W.A.Q to delete a record whose employee id is 9?
+        
+    delete from employee_info where emp_id=9;
+
+22.W.A.Q to display designation with alias_name as jobtype?
+                
+    select designation as jobtype from employee_info;
+
+            
+23.W.A.Q to obtain employee name with his current salary and new salary with 25% hike?
+            
+    select ename,salary as current_salary,salary+(salary*0.25) as New_salary from employee_info;
+
+24.W.A.Q to display all the records of employee with salary increment of 500? 
+
+    select *,salary+500 as increment from employee_info; 
+
+    (or)
+                
+    select employee_info.*,salary+500 as increment from employee_info;
+
+
+25.W.A.Q to display all the records of employee with salary decrement of 500?
+
+    select *,salary-500 as decrement from employee_info;
+
+    (or)
+
+    select employee_info.*,salary-500 as decrement from employee_info;
+
+26.W.A.Q to display name salary and annual salary of all the employee?
+                
+    select *,salary*12 annual_salary from employee_info;
+
+    (or)
+
+    select employee_info.*,salary*12 annual_salary from employee_info;
+
+
+27.W.A.Q to display per_day salary of all the employee?         
+
+    select salary/30 as per_day_salary from employee_info;
+
+28. W.A.Q to display distinct designation from employee table?
+
+    select distinct designation from employee_info;
+
+29. W.A.Q to display distinct dept_no and designation?
+
+    select distinct dept_no,designation from employee_info;
+
+
+30. W.A.Q to display details of employee with dept_no is 10?
+            
+    select * from employee_info where dept_no=10;
+
+31. W.A.Q to display details of employee with salary > 20000?
+
+    select * from employee_info where salary>20000;
+
+32. W.A.Q to display details of employee with salary < 20000?
+
+    select * from employee_info where salary<20000;   
+
+33. W.A.Q to display details of employee with salary >= 10000?    
+
+    select * from employee_info where salary>=10000;
+
+34. W.A.Q to display details of employee with salary <= 30000?
+
+    select * from employee_info where salary<=30000;
+
+35. W.A.Q to display details of employee with salary not equals to 10000?
+
+    select * from employee_info where salary<>10000;
+
+    (or)
+
+    select * from employee_info where salary!=20000;
+    
+
+36. W.A.Q to display record of employee working as HR and in dept_no 10?
+
+    select * from employee_info where designation = 'HR' AND dept_no=10;
+
+37. W.A.Q to display all the records of the employee who is a salesman and hiredate is after 2016?
+
+    select * from employee_info where designation = 'salesman' and hiredate>'2016-12-31';    
+            
+38. W.A.Q to display who is HR in dept_no 10 only if salary is greater than 25000?
+
+    select * from employee_info where designation = 'HR' AND dept_no=10 AND salary>25000;
+
+39. W.A.Q to display details of employee working in dept_no 10,20?
+
+    select * from employee_info where dept_no=10 or dept_no=20;
+
+40. W.A.Q to display name,salary,dept_no who is working as a tester or whose salary = 15000?
+
+    select ename,salary,dept_no from employee_info where designation = 'tester' or salary=15000;
+
+        
+41. W.A.Q to display name of all the employee working as tester as well as working in dept_no 20 or clerk whose salary <= 15000?
+
+    select ename from employee_info where (designation = 'tester' and dept_no=20) or (designation='clerk' and salary<=15000);
+
+42. W.A.Q to display employee details who is not in dept_no 10?
+
+    select * from employee_info where NOT dept_no=10;
+
+43. W.A.Q to display all the records of employee excluding HR who is working in dept_no 30?
+
+    select * from employee_info where not (designation = 'HR' and dept_no = 30);
+
+44. W.A.Q to display all the employee who is hired after jan 2015 working as tester in dept 20 or hired before 2015?
+
+    select * from employee_info where (hiredate>'2015-01-31' and designation = 'tester' and dept_no=20) or hiredate<'2015-01-01';
+
+45. W.A.Q to display all the records of employee working in dept_no 10 or 30 or 40 or 50 or 60?
+
+    select * from employee_info where  dept_no = 10 or dept_no=30 or dept_no=40 ;
+
+    (or)
+
+    select * from employee_info where dept_no IN (10,30,40);
+
+46. W.A.Q to display all the records of employee who is working as salesman,manager or admin?
+
+    select * from employee_info where designation IN('salesman','manager','admin');
+
+
+47. W.A.Q to display all the details of employee working in dept_no 50,30,40 excluding salesman and hr?
+
+    select * from employee_info where dept_no IN (50,40,30) and designation NOT IN ('salesman','HR');
+
+48. W.A.Q to display all the records of the employee whose salary range within 20000 to 40000?
+
+    select * from employee_info where salary > 20000 and salary < 40000;
+
+49. W.A.Q to display details of employee who were hired during 2014.?
+
+    select * from employee_info where hiredate between '2014-01-01' and '2014-12-31';      
+
+50. W.A.Q to display ename,salary of the employee who are working in dept_no 10,20 and their annual salary between 40000 and 50000?
+
+    select ename,salary from employee_info where dept_no in (10,20) and salary*12 between 40000 and 50000;
+
+51. W.A.Q to display all the records of the employee excluding those who are hired in 2017?
+
+    select * from employee_info where hiredate NOT BETWEEN '2017-01-01' and '2017-12-31';
+
+52. W.A.Q to display the details of employee whose name starts with M?
+
+    select * from employee_info where ename LIKE 'M%';
+
+53. W.A.Q to display details of those who have only 5 characters in name?
+
+    select * from employee_info where ename LIKE '_____';
+
+54. W.A.Q to display details of the employee who has atleast 2 'l' in their names?
+
+    select * from employee_info where ename LIKE '%l%l%';
+
+55. W.A.Q to display all the records whose name starts with 'M' and end with 'a'?
+
+    select * from employee_info where ename like 'M%a';
+
+56.  W.A.Q to display all the records whose name length is 5 and starts with 's' and 'l' as second last character?
+
+    select * from employee_info where ename like 's__l_';
+
+57. W.A.Q to display if the employee name begins with 'S' or 'A'?
+
+    select * from employee_info where ename like 'S%' or ename like 'A%';
+                  
+58. W.A.Q to display all the records of employee excluding name begins with 'Z' and 'C'?
+
+    select * from employee_info where ename NOT LIKE 'Z%' and ename NOT LIKE 'C%';
+
+
+
+
+                

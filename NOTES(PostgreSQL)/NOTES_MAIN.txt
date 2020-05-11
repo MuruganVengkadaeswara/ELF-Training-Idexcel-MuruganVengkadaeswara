@@ -283,9 +283,9 @@ DQL: Data Query Language +
     DELETE FROM table_name WHERE condition;
 
 
-    W.A.Q to delete a record whose employee id is 9?
+   21. W.A.Q to delete a record whose employee id is 9?
         
-    delete from employee_info where emp_id=9;
+        delete from employee_info where emp_id=9;
 
 
 
@@ -402,11 +402,11 @@ Expression:
         NOTE: giving more than one col_name for distinct will return combination of unique/distinct values.
               or it will remove the combination of duplicates.
 
-        1. W.A.Q to display distinct designation from employee table?
+        22. W.A.Q to display distinct designation from employee table?
 
             select distinct designation from employee_info;
 
-        2. W.A.Q to display distinct dept_no and designation?
+        23. W.A.Q to display distinct dept_no and designation?
 
             select distinct dept_no,designation from employee_info;
 
@@ -421,27 +421,27 @@ Expression:
         != - not equals
         <> - not equals
 
-        3. W.A.Q to display details of employee with dept_no is 10?
+        24. W.A.Q to display details of employee with dept_no is 10?
             
             select * from employee_info where dept_no=10;
 
-        4. W.A.Q to display details of employee with salary > 20000?
+        25. W.A.Q to display details of employee with salary > 20000?
 
             select * from employee_info where salary>20000;
 
-        5. W.A.Q to display details of employee with salary < 20000?
+        26. W.A.Q to display details of employee with salary < 20000?
 
              select * from employee_info where salary<20000;   
 
-        6. W.A.Q to display details of employee with salary >= 10000?    
+        27. W.A.Q to display details of employee with salary >= 10000?    
 
              select * from employee_info where salary>=10000;
 
-        7. W.A.Q to display details of employee with salary <= 30000?
+        28. W.A.Q to display details of employee with salary <= 30000?
 
              select * from employee_info where salary<=30000;
 
-        8. W.A.Q to display details of employee with salary not equals to 10000?
+        29. W.A.Q to display details of employee with salary not equals to 10000?
 
              select * from employee_info where salary<>10000;
 
@@ -461,15 +461,15 @@ Expression:
             ------
             SELECT * FROM table_name WHERE  condition1 AND condition2 AND conditionN; 
 
-            1. W.A.Q to display record of employee working as HR and in dept_no 10?
+            30. W.A.Q to display record of employee working as HR and in dept_no 10?
 
                 select * from employee_info where designation = 'HR' AND dept_no=10;
 
-            2. W.A.Q to display all the records of the employee who is a salesman and hiredate is after 2016?
+            31. W.A.Q to display all the records of the employee who is a salesman and hiredate is after 2016?
 
                 select * from employee_info where designation = 'salesman' and hiredate>'2016-12-31';    
             
-            3. W.A.Q to display who is HR in dept_no 10 only if salary is greater than 25000?
+            32. W.A.Q to display who is HR in dept_no 10 only if salary is greater than 25000?
 
                 select * from employee_info where designation = 'HR' AND dept_no=10 AND salary>25000;
         
@@ -479,18 +479,18 @@ Expression:
             ------
             SELECT * FROM table_name WHERE  condition1 OR condition2 OR conditionN; 
 
-            4. W.A.Q to display details of employee working in dept_no 10,20?
+            33. W.A.Q to display details of employee working in dept_no 10,20?
 
                 select * from employee_info where dept_no=10 or dept_no=20;
 
-            5. W.A.Q to display name,salary,dept_no who is working as a tester or whose salary = 15000?
+            34. W.A.Q to display name,salary,dept_no who is working as a tester or whose salary = 15000?
 
                 select ename,salary,dept_no from employee_info where designation = 'tester' or salary=15000;
 
             ASSIGNMENT
             ==========
 
-            6. W.A.Q to display name of all the employee working as tester as well as working in dept_no 20 or clerk whose salary <= 15000?
+            35. W.A.Q to display name of all the employee working as tester as well as working in dept_no 20 or clerk whose salary <= 15000?
 
                 select ename from employee_info where (designation = 'tester' and dept_no=20) or (designation='clerk' and salary<=15000);
            
@@ -502,7 +502,7 @@ Expression:
              ------
              SELECT * FROM table_name WHERE NOT condition;
 
-            7. W.A.Q to display employee details who is not in dept_no 10?
+            36. W.A.Q to display employee details who is not in dept_no 10?
 
                 select * from employee_info where NOT dept_no=10;
 
@@ -514,15 +514,15 @@ Expression:
 
 
 
-        1. W.A.Q to display all the records of employee excluding HR who is working in dept_no 30?
+        37. W.A.Q to display all the records of employee excluding HR who is working in dept_no 30?
 
             select * from employee_info where not (designation = 'HR' and dept_no = 30);
 
-        2. W.A.Q to display all the employee who is hired after jan 2015 working as tester in dept 20 or hired before 2015?
+        38. W.A.Q to display all the employee who is hired after jan 2015 working as tester in dept 20 or hired before 2015?
 
             select * from employee_info where (hiredate>'2015-01-31' and designation = 'tester' and dept_no=20) or hiredate<'2015-01-01';
 
-        3. W.A.Q to display all the records of employee working in dept_no 10 or 30 or 40 or 50 or 60?
+        39. W.A.Q to display all the records of employee working in dept_no 10 or 30 or 40 or 50 or 60?
 
             select * from employee_info where  dept_no = 10 or dept_no=30 or dept_no=40 ;
 
@@ -540,7 +540,7 @@ Expression:
             ------
                 SELECT * FROM table_name WHERE col_name IN (value1,value2,..,valueN);
 
-        4. W.A.Q to display all the records of employee who is working as salesman,manager or admin?
+        40. W.A.Q to display all the records of employee who is working as salesman,manager or admin?
 
              select * from employee_info where designation IN('salesman','manager','admin');
 
@@ -550,7 +550,7 @@ Expression:
             ------
                SELECT * FROM table_name WHERE col_name NOT IN (value1,value2,..,valueN);
 
-        5. W.A.Q to display all the details of employee working in dept_no 50,30,40 excluding salesman and hr?
+        41. W.A.Q to display all the details of employee working in dept_no 50,30,40 excluding salesman and hr?
 
                 select * from employee_info where dept_no IN (50,40,30) and designation NOT IN ('salesman','HR');
 
@@ -563,15 +563,15 @@ Expression:
                SELECT * FROM table_name where col_name BETWEEN lower_limit AND upper_limit; 
 
 
-        6. W.A.Q to display all the records of the employee whose salary range within 20000 to 40000?
+        42. W.A.Q to display all the records of the employee whose salary range within 20000 to 40000?
 
                 select * from employee_info where salary > 20000 and salary < 40000;
 
-        7. W.A.Q to display details of employee who were hired during 2014.?
+        43. W.A.Q to display details of employee who were hired during 2014.?
 
               select * from employee_info where hiredate between '2014-01-01' and '2014-12-31';      
 
-        8. W.A.Q to display ename,salary of the employee who are working in dept_no 10,20 and their annual salary between 40000 and 50000?
+        44. W.A.Q to display ename,salary of the employee who are working in dept_no 10,20 and their annual salary between 40000 and 50000?
 
               select ename,salary from employee_info where dept_no in (10,20) and salary*12 between 40000 and 50000;
         
@@ -583,7 +583,7 @@ Expression:
                 SELECT * FROM table_name where col_name NOT BETWEEN lower_limit AND upper_limit;
 
         
-        9. W.A.Q to display all the records of the employee excluding those who are hired in 2017?
+        45. W.A.Q to display all the records of the employee excluding those who are hired in 2017?
 
                 select * from employee_info where hiredate NOT BETWEEN '2017-01-01' and '2017-12-31';
 
@@ -602,3 +602,58 @@ Expression:
             syntax
             -------
                SELECT * FROM table_name WHERE col_name IS NOT NULL;
+    
+
+        + LIKE - used to perform a pattern matching.
+
+                characters : 
+
+                        1. ordinary characters (doesnt have any special functionalities/meaning)
+                            a-z , A-Z , 0-9
+
+                        2. special characters  (it has some special functionality)
+                            symbols.(!,@,#,$, &,* )
+
+                To perform pattern matching we use 2 special characters % and _ 
+
+                        % - matches 0 to n characters (go with it if u dont wanna specify the number of characters)
+                        _ - matches exactly one character(go with it if u wanna specify the number of characters)
+
+                    syntax
+                    -------
+                     SELECT * FROM table_name WHERE col_name LIKE '%/_';
+
+                     e.g select * from table_name where ename LIKE 'M%';
+
+                46. W.A.Q to display the details of employee whose name starts with M?
+
+                    select * from employee_info where ename LIKE 'M%';
+
+                47. W.A.Q to display details of those who have only 5 characters in name?
+
+                    select * from employee_info where ename LIKE '_____';
+
+                48. W.A.Q to display details of the employee who has atleast 2 'l' in their names?
+
+                    select * from employee_info where ename LIKE '%l%l%';
+
+                49. W.A.Q to display all the records whose name starts with 'M' and end with 'a'?
+
+                    select * from employee_info where ename like 'M%a';
+
+                50.  W.A.Q to display all the records whose name length is 5 and starts with 's' and 'l' as second last character?
+
+                    select * from employee_info where ename like 's__l_';
+
+                51. W.A.Q to display if the employee name begins with 'S' or 'A'?
+
+                    select * from employee_info where ename like 'S%' or ename like 'A%';
+                
+                + NOT LIKE - 
+                
+                52. W.A.Q to display all the records of employee excluding name begins with 'Z' and 'C'?
+
+                    select * from employee_info where ename NOT LIKE 'Z%' and ename NOT LIKE 'C%';
+
+                
+
