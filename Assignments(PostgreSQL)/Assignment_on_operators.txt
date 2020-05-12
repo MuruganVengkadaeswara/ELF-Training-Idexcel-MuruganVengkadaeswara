@@ -1,0 +1,137 @@
+1) W.A.Q to LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL 
+       
+    select ename from employee_info where salary is null;
+
+2) W.A.Q to LIST ALL THE EMPLOYEES WHO DON’T HAVE A DEPT NO
+    
+    select ename from employee_info where dept_no is null;
+
+3) W.A.Q to LIST ALL THE SALESMEN IN DEPT 40
+    
+    select ename from employee_info where designation = 'salesman' and dept_no=40;
+
+4) W.A.Q to LIST ALL THE SALESMEN IN DEPT NUMBER 40 AND HAVING SALARY GREATER THAN 1500
+
+    select ename from employee_info where designation = 'salesman' and dept_no=40 and salary>1500;
+
+5) W.A.Q to LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘S’ OR ‘A’
+
+    select ename from employee_info where ename like 'S%' or ename like 'A%';
+
+6) W.A.Q to LIST ALL THE EMPLOYEES EXCEPT THOSE WHO ARE WORKING IN DEPT 10 & 20. 
+
+    select ename from employee_info where dept_no not in(10,20);
+
+7) W.A.Q to LIST THE EMPLOYEES WHOSE NAME DOES NOT START WITH ‘S’
+
+    select ename from employee_info where ename not like 'S%';
+
+8) W.A.Q to LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10
+
+
+    
+9) W.A.Q to LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL AND WORKING AS CLERK
+
+    select ename from employee_info where designation = 'clerk' and salary is null;
+
+10) W.A.Q to LIST ALL THE EMPLOYEES WHO DON’T HAVE A REPORTING MANAGER IN DEPTNO 10 OR 30
+
+
+
+11) W.A.Q to LIST ALL THE SALESMEN IN DEPT 30 WITH SAL MORE THAN 2450
+
+    select ename from employee_info where designation='salesman' and dept_no = 40 and salary>2450;
+
+12) W.A.Q to LIST ALL THE ANALYST IN DEPT NUMBER 20 AND HAVING SALARY GREATER THAN 2500
+
+    select ename from employee_info where designation='analyst' and dept_no = 20 and salary>2500;
+
+13) W.A.Q to LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘M’ OR ‘J’
+
+    select ename from employee_info where ename like 'M%' or ename like 'J%';
+
+14) W.A.Q to LIST ALL THE EMPLOYEES WITH ANNUAL SALARY EXCEPT THOSE WHO ARE WORKING IN DEPT 30 
+
+    select ename,salary*12 as Annual_salary from employee_info where dept_no not in (30);
+
+    (or)
+
+    select ename,salary*12  "Annual salary" from employee_info where dept_no not in (30); (for_space)
+
+
+15) W.A.Q to LIST THE EMPLOYEES WHOSE NAME DOES NOT END WITH ‘ES’ OR ‘R’
+
+    select ename from employee_info where ename not like '%es' or ename not like '%r';
+
+16) W.A.Q to LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10 ALONG WITH 10% HIKE IN SALARY
+
+
+
+17) W.A.Q to DISPLAY ALL THE EMPLOYEE WHO ARE ‘SALESMAN’S HAVING ‘E’ AS THE LAST BUT ONE CHARACTER  IN ENAME BUT SALARY HAVING EXACTLY 4 CHARACTER
+
+    select ename from employee_info where designation='salesman' and ename like '%e_' and salary between 1000 and 9999;
+
+18) W.A.Q to DISPLAY ALL THE EMPLOYEE WHO ARE JOINED AFTER YEAR 81
+
+    select ename from employee_info where hiredate>'1981-12-31';
+
+19) W.A.Q to DISPLAY ALL THE EMPLOYEE WHO ARE JOINED IN FEB
+
+    select ename from employee_info where cast(hiredate as text)  like '%-02-%';
+
+    (or)
+
+    select ename from employee_info where cast(hiredate as text)  like '____-02-__';
+
+
+20) W.A.Q to LIST THE EMPLOYEES WHO ARE NOT WORKING AS MANAGERS AND CLERKS IN DEPT 10 AND 20 WITH A SALARY IN THE RANGE OF 1000 TO 3000
+
+    select ename from employee_info where designation not in('managers','clerks') and dept_no in(10,20) and salary between 10000 and 30000;
+
+21) W.A.Q to LIST THE EMPLOYEES WHOSE SALARY NOT IN THE RANGE OF 1000 TO 2000 AND WORKING IN DEPT 10,20 OR 30 EXCEPT ALL SALESMEN
+
+    select ename from employee_info where salary not between 1000 and 2000 and dept_no in(10,20,30) and designation<>'salesman';
+
+22) W.A.Q to LIST THE DEPARTMENT NAMES WHICH ARE HAVING LETTER ‘O’ IN THEIR LOCATIONS AS WELL AS THEIR DEPARTMENT NAMES
+
+
+
+23) W.A.Q to DISPLAY ALL THE EMPLOYEES WHOSE JOB HAS STRING ‘MAN’ IN IT.
+
+    select ename from employee_info where designation like '%man%';
+
+24) W.A.Q to LIST THE EMPLOYEES WHO ARE HIRED AFTER 82 AND BEFORE 87.
+
+    select ename from employee_info where hiredate between '1982-12-31' and '1987-12-31';
+
+25) W.A.Q to LIST ALL THE DETAILS OF EMPLOYEES HIRED IN NOVEMBER AND DECEMBER.
+
+    select ename from employee_info where cast(hiredate as text)  like '%-11-%' or cast(hiredate as text) like '%-12-%';
+
+    (or)
+
+    select ename from employee_info where cast(hiredate as text)  like '____-11-__' or cast(hiredate as text) like '____-12-__';
+
+26) W.A.Q to LIST ALL THE EMPLOYEE NAMES AND COMISSION FOR THOSE EMPLOYEES WHO EARN COMISSION MORE THAN THEIR SALARY
+
+
+
+27) W.A.Q to LIST NAME AND DESIGNATION FOR ALL THE EMPLOYEES HAVING REPORTING MANAGERS AND ALSO THRIE NAMES STARTING WITH ‘S’
+
+    
+
+28) W.A.Q to LIST NAME AND SALARY OF ALL THE EMPLOYEES IF THEIR ANNUAL SALARY ENDS WITH ‘0’ .
+
+    select ename,salary from employee_info where cast(salary*12 as text) like '%0';
+
+29) W.A.Q to LIST NAME OF THE EMPLOYEE HAVING ATLEAST 2L’s IN HIS NAME .
+
+    select ename from employee_info where ename like '%l%l';
+
+30) W.A.Q to LIST NAME OF THE EMPLOYEES WHOS NAME STARTS WITH A ‘VOWEL’
+
+    select ename from employee_info where ename SIMILAR TO '(A|E|I|O|U)%';
+
+    (or)
+
+    select ename from employee_info where ename like 'A%' or ename like 'E%' or ename like 'I%' or ename like 'O%' or ename like 'U%';
