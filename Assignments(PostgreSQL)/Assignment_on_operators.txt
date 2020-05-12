@@ -28,7 +28,7 @@
 
 8) W.A.Q to LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10
 
-
+    select ename from employee_info where rep_mgr is not null and dept_no=10;
     
 9) W.A.Q to LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL AND WORKING AS CLERK
 
@@ -36,7 +36,7 @@
 
 10) W.A.Q to LIST ALL THE EMPLOYEES WHO DON’T HAVE A REPORTING MANAGER IN DEPTNO 10 OR 30
 
-
+    select ename from employee_info where rep_mgr is null and dept_no in (10,30);
 
 11) W.A.Q to LIST ALL THE SALESMEN IN DEPT 30 WITH SAL MORE THAN 2450
 
@@ -65,11 +65,15 @@
 
 16) W.A.Q to LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10 ALONG WITH 10% HIKE IN SALARY
 
-
+    select ename,(salary+0.1*salary) as "Hiked salary" from employee_info where rep_mgr is not null and dept_no=10;
 
 17) W.A.Q to DISPLAY ALL THE EMPLOYEE WHO ARE ‘SALESMAN’S HAVING ‘E’ AS THE LAST BUT ONE CHARACTER  IN ENAME BUT SALARY HAVING EXACTLY 4 CHARACTER
 
     select ename from employee_info where designation='salesman' and ename like '%e_' and salary between 1000 and 9999;
+
+    (or)
+
+    elect ename from employee_info where designation='salesman' and ename like '%e_' and cast(salary as varchar) like '____.%';
 
 18) W.A.Q to DISPLAY ALL THE EMPLOYEE WHO ARE JOINED AFTER YEAR 81
 
@@ -94,7 +98,7 @@
 
 22) W.A.Q to LIST THE DEPARTMENT NAMES WHICH ARE HAVING LETTER ‘O’ IN THEIR LOCATIONS AS WELL AS THEIR DEPARTMENT NAMES
 
-
+    select dept_name from employee_info where dept_name like '%o%' and location like '%o%';
 
 23) W.A.Q to DISPLAY ALL THE EMPLOYEES WHOSE JOB HAS STRING ‘MAN’ IN IT.
 
@@ -114,11 +118,11 @@
 
 26) W.A.Q to LIST ALL THE EMPLOYEE NAMES AND COMISSION FOR THOSE EMPLOYEES WHO EARN COMISSION MORE THAN THEIR SALARY
 
-
+    select ename,comm from employee_info where comm>salary;
 
 27) W.A.Q to LIST NAME AND DESIGNATION FOR ALL THE EMPLOYEES HAVING REPORTING MANAGERS AND ALSO THRIE NAMES STARTING WITH ‘S’
 
-    
+    select ename,designation from employee_info where rep_mgr is not null and ename like 'S%';
 
 28) W.A.Q to LIST NAME AND SALARY OF ALL THE EMPLOYEES IF THEIR ANNUAL SALARY ENDS WITH ‘0’ .
 
