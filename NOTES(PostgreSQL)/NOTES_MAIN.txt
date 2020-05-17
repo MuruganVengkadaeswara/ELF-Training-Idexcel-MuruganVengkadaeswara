@@ -655,5 +655,139 @@ Expression:
 
                     select * from employee_info where ename NOT LIKE 'Z%' and ename NOT LIKE 'C%';
 
-                
+    FUNCTIONS
+    =========
 
+        Function is a block of code used to perform specific task.
+
+        For doing operations in SQL there are many inbuilt functions.
+
+            Categories:
+
+            1.Scalar functions.
+            2.Aggregate functions.
+    
+
+            1.Multi Row / Aggregate function:
+
+                We have n number of inputs and only one output.
+
+                    Input    +++++++++++++   output
+                    ------>  +           +  
+                    ------>  + function  +   ------>
+                    ------>  +           +   
+                             +++++++++++++
+
+
+                1.AVG()  -returns average value
+                2.COUNT()-it counts the number of rows.
+                3.MAX()  -Returns maximum value of the selected column.(what ha)
+                4.MIN()  -Returns minimum value of the selected column.
+                5.SUM()  -Returns sum of all the values of the selected column.
+
+                syntax
+                ------
+                    select function_name(col_name) from table_name;
+                    
+                    select count(*/col_name) from table_name;
+
+
+            2.Single Row / Scalar function:
+
+                 
+                 We have n number of inputs and n number of output. 
+
+                 i.e for one input we have one output.
+
+                    Input    +++++++++++++   output
+                    ------>  +           +   ------>
+                    ------>  + function  +   ------>
+                    ------>  +           +   ------>
+                             +++++++++++++
+
+    CLAUSES:
+    =======
+        SELECT , FROM ,WHERE etc..,
+
+        ORDER BY
+        --------
+            used to sort the result set in ascending or descending.
+
+            ORDER BY clause always executes after the SELECT clause.
+
+            ORDER BY clause should always be the last clause to be written in the Query.
+
+            By default the sorting order is Ascending.(if not specified).
+
+            in order by clause we can use alias name.
+
+
+            syntax
+            ------
+            SELECT col_1,col_2/* FROM table_name ORDER BY col_1 ASC|DESC; 
+
+            order of execution
+            ------------------
+                1.FROM
+                2.WHERE
+                3.SELECT
+                4.ORDER BY
+
+        GROUP BY 
+        --------
+
+            GROUP - collection of similar items.
+
+            if GROUP BY clause is used in order by clause We can use multi row function 
+            only for col_name/expression which is used by GROUP BY clause while sorting
+
+            it groups rows that have same values into summary rows.
+
+            GROUP BY statement is often used with Aggregate functions to group the result-set by one or more columns.
+
+            
+
+            GROUP BY clause executes row by row.
+
+            After the execution of GROUP BY clause the records are grouped therefore all the clauses will execute 
+            after the execution of GROUP BY clause.
+            if any clause executes after GROUP BY it will execute group by group.
+
+
+
+             order of execution
+            ------------------
+                1.FROM
+                2.WHERE
+                3.GROUP BY
+                4.SELECT
+
+            syntax
+            -------
+                SELECT */col_name(s)/expression FROM table_name WHERE condition GROUP BY col_name;
+
+    HAVING
+    ======
+
+        It is used to filter the groups on the condition.
+
+        Its always executed after GROUP BY.
+
+        in HAVING we can only use a column used in GROUP BY.
+
+            syntax
+            -------
+                SELECT */col_name(s)/expression 
+                FROM table_name WHERE(row_filter_condition) 
+                GROUP BY col_name 
+                HAVING(group_filter_condition) ;
+
+            order of execution
+            ------------------
+                1.FROM
+                2.WHERE
+                3.GROUP BY
+                4.HAVING
+                5.SELECT
+
+        

@@ -113,8 +113,7 @@
 22.W.A.Q to display designation with alias_name as jobtype?
                 
     select designation as jobtype from employee_info;
-
-            
+           
 23.W.A.Q to obtain employee name with his current salary and new salary with 25% hike?
             
     select ename,salary as current_salary,salary+(salary*0.25) as New_salary from employee_info;
@@ -285,7 +284,64 @@
 
     select * from employee_info where ename NOT LIKE 'Z%' and ename NOT LIKE 'C%';
 
+60. W.A.Q to return the average salary of all the employee?
 
+    select avg(salary) from employee_info;   
 
+61. W.A.Q to display the count of employee?
 
-                
+    select count(*) from employee_info;
+
+62. W.A.Q to display maximum salary?
+
+    select max(salary) from employee_info;
+
+63. W.A.Q to display minimum salary?
+
+    select min(salary) from employee_info;
+
+64. W.A.Q to display sum of salary?
+
+    select sum(salary) from employee_info;
+
+65. W.A.Q to display avg,sum,max,min of salary and count of employee?
+
+    select max(salary) max_sal,min(salary) min_sal,sum(salary) total_sal,avg(salary) Avg_salary,count(*) from employee_info;
+
+66. W.A.Q to display all the records according to salary in descending order?
+
+    select * from employee_info order by salary desc;
+
+67. W.A.Q to display all the records and sort the records in descending order of hiredate , if more than one employee is hired on same
+    date highest salary should be shown first.?
+
+    select * from employee_info order by hiredate DESC,salary DESC;
+
+68. W.A.Q to display name of the employee , salary and annual_salary and sort asc by annual_salary?
+
+    select ename,salary,salary*12 annual_salary from employee_info order by annual_salary asc;
+
+69. W.A.Q to display name designation of all the employee working in either of dept 10,20,40 and sort in asc by salary?
+
+    select ename,designation from employee_info where dept_no in(10,20,40) order by salary asc;
+
+70. W.A.Q to display count of the employee  working in each department?
+
+    select count(*) from employee_info group by dept_no;
+
+    (or)
+
+    select count(*),dept_no from employee_info group by dept_no;
+
+71. W.A.Q to display the highest salary of employee in each dept?
+
+    select max(salary),dept_no from employee_info group by dept_no;
+
+72. W.A.Q to display number of testers working in each dept?
+
+    select count(*),dept_no from employee_info where designation='tester' group by dept_no;
+
+73. W.A.Q to display the dept_no which has atleast 2 clerks working?
+
+    select dept_no from employee_info where designation='clerk' group by dept_no having count(*)>=2;
+

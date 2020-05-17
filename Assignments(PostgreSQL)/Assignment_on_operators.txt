@@ -130,7 +130,7 @@
 
 29) W.A.Q to LIST NAME OF THE EMPLOYEE HAVING ATLEAST 2L’s IN HIS NAME .
 
-    select ename from employee_info where ename like '%l%l';
+    select ename from employee_info where ename like '%l%l%';
 
 30) W.A.Q to LIST NAME OF THE EMPLOYEES WHOS NAME STARTS WITH A ‘VOWEL’
 
