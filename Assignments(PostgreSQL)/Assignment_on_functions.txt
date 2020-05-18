@@ -42,6 +42,14 @@
 
     select dept_name,regexp_matches(dept_name,'o') from dept_info;
 
+    (or)
+
+    select dept_name from dept_info where length(dept_name)-length(replace(dept_name,'o',''))>=1;
+
+    (or)
+
+    select dept_name from dept_info where position('o' in dept_name)!=0;
+
 8. Display the output as shown below,
     Scott working as a clerk earns 3000 in dept 20
 
@@ -50,6 +58,10 @@
 9. Calculate number of L in string 'HELLLLL'
 
     select length('HELLLLL')-length(replace('HELLLLL','L','')) as "number of L";
+
+    (or)
+
+    select count(*) from regexp_matches('HELLLLL','L','g');
 
 10. Display all the employees whose job has a string 'MAN'
 
