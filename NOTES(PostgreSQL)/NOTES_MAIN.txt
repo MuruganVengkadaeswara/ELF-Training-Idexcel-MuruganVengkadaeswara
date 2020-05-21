@@ -790,4 +790,70 @@ Expression:
                 4.HAVING
                 5.SELECT
 
+    SUB-QUERY
+    =========
+
         
+        1. A query written inside another query is known as subquery.
+        2. sub query is a.k.a "inner query" or "nested query"
+        3. sub query is an alternative way of returning data from multiple tables.
+        4. subqueries must be enclosed within paranthesis.
+
+            syntax
+            ------
+
+                SELECT * /col_name
+                FROM table_name
+                WHERE col_name operator(select */col_name from table_name condition);  
+        
+
+        5.subquery is divided in to 2 types
+
+            i.  single-row sub query
+            ii. multi-row sub query
+
+            i) single row subquery
+            ----------------------
+
+                * is the single value operators such as =,>,<,<=,>= are used 
+                  we call it as single row sub query.
+                * single row sub query must return a single record.
+
+                syntax
+                ------
+
+                        SELECT col1,col2... FROM table_name WHERE col1 operator
+                        (SELECT col from table_name where expr1=value);
+
+            ii) multi row subquery
+            ----------------------
+
+            (IN ,ALL, ANY)
+
+                * if multi value operator such as IN are used we call it as multi
+                  row subquery.
+                * multi row subquery return one or more number of rows.
+                    (inner query can return any number of rows)
+
+                syntax
+                ------
+
+                    SELECT col1,col2... FROM table_name WHERE col1 operator
+                    (SELECT col from table_name where expr1=value);
+
+
+              
+
+
+            ASSIGNMENT
+            ==========
+                Create a table dept_info
+
+                                --->dept_no (pk)            int           (10,20,30,40,50,60)
+                                --->dname   (not null)      varchar(200)  (HR,admin,Research,Development,sales,testing)
+                                --->location                varchar(200)  (city_names)
+
+                                insert 6 records
+
+            
+

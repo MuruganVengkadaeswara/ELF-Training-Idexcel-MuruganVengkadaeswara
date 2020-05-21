@@ -345,3 +345,58 @@
 
     select dept_no from employee_info where designation='clerk' group by dept_no having count(*)>=2;
 
+74. W.A.Q to display dept_no which has total salary > 10000?
+
+    select dept_no from employee_info group by dept_no having sum(salary)>10000;
+
+75. W.A.Q to display dept_no which has atleast 2 employee hired in the same date?
+
+    select dept_no from employee_info group by dept_no,hiredate having count(hiredate)>=2;
+
+    (or)
+
+    select dept_no from employee_info group by hiredate,dept_no having count(hiredate)>1;
+
+76. W.A.Q to display dept_no and average salary of all the departments whose average sal is > 15000 
+    by excluding the employee whose names begins with 'R'?
+
+    select dept_no,avg(salary) average from employee_info where ename not like 'R%' group by dept_no having avg(salary)>15000;
+
+77. W.A.Q to display name of all the employee who were hired after Gayathri?
+
+    select ename from employee_info where hiredate>(select hiredate from employee_info where ename='Gayathri');
+
+78. W.A.Q to display name of all the employee who is working for research department?
+
+    select ename from employee_info where dept_no=(select dept_no from dept_info where dept_name='Research');
+
+79. W.A.Q to display name of employee who is working in location which have atleast 1 'A'
+
+    select ename from employee_info where dept_no in (select dept_no from dept_info where location like '%A%');
+
+80. W.A.Q to display second  max salary?
+
+    select max(salary) from employee_info where salary<(select max(salary) from employee_info);
+
+    (or)
+
+    select salary from employee_info order by salary desc limit 1 offset 1;
+
+81. W.A.Q to display dept_name which has atleast 2 clerks?
+
+    select dept_name from dept_info where dept_no in(select dept_no from employee_info where designation='clerk' group by dept_no having count(*)>=2);
+
+82. W.A.Q to display the 3rd max salary?
+
+    select salary from employee_info order by salary desc limit 1 offset 2;
+
+    (or)
+
+    select max(salary) from employee_info where salary<(select max(salary) from employee_info where salary<(select max(salary) from employee_info ));
+
+
+83. W.A.Q to display name of the employee who were hired before Gayathri and their salary is > Ahamed?
+
+    select ename from employee_info where hiredate<(select hiredate from employee_info where ename='Gayathri') and salary>(select salary from employee_info where ename='Ahamed');
+
+
