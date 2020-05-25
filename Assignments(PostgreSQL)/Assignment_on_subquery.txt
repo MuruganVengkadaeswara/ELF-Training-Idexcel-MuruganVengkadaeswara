@@ -68,7 +68,7 @@
 
 18. DISPLAY THE JOB, MANAGER NUMBER OF EMPLOYEES WHO IS WORKING FOR JONES?
 
-
+    select count(*) from employee group by mgr having mgr='jones';
 
 19. DISPLAY THE EMPLOYEE NAMES, HIGHER DATE, COMMISSION OF FORD'S MANAGER?
 
@@ -100,7 +100,7 @@
 
 26. DISPLAY EMPLOYEE DETAILS WHO ARE REPORTING TO BLAKE AND HAVE COMMISSION WITHOUT USING NULL OR NOT NULL
 
-    select * from employee_info where rep_mgr='blake' and comm is not null;
+    select * from employee_info where rep_mgr='blake' and comm>=0;
 
 
 27. LIST ALL THE DEPTNAME AND LOC OF ALL THE SALESMAN MANAGER-MANAGER'S
@@ -113,11 +113,11 @@
 
 29. LIST THE EMPLOYEES WHO DOES NOT DIRECTLY REPORT TO PRESIDENT,HAVE COMMISSION AND SALARY MORE THAN MAX SALARY OF ALL THE CLERK WITHOUT USING NULL OR NOT NULL
 
-
+    select * from employee where mgr<>'president' amd commission>(select max(sal) from employee group by designation having designation='clerk') and sal>(select max(sal) from employee group by designation having designation='clerk');
 
 30. LIST THE EMPLOYEES WHO JOINED AFTER 2 YEARS OF FIRST EMPLOYEE OF THE COMPANY AND MORE THAN BLAKE SALARY
 
-
+    select ename from employee_info where hiredate=(select min(hiredate)+interval '2 year' from employee_info) and salary>(select salary from employee_info where ename='blake');
 
 31. DISPLAY LOCATION OF ALL THE EMPLOYEES WHO REPORTING TO BLAKE
 
@@ -275,17 +275,17 @@
 
     select dept_name from dept_info where dept_no in(select dept_no from employee_info where designation='salesman');
 
-67. LIST THE DEPARTMENT NAMES THAT ARE HAVING AT LEAST 3 EMPLOYES IN IT.
+67. LIST THE DEPARTMENT NAMES THAT ARE HAVING AT LEAST 3 EMPLOYEES IN IT.
 
     select dept_name from dept_info where dept_no in (select dept_no from employee_info group by dept_no having count(*)>=3);
 
 68.LIST EMPLOYEES FROM RESEARCH AND ACCOUNTING DEPARTMENT HAVING ATLEAST TWO REPORTING
 
-
+    select ename from employee_info where dept_no in (select dept_no from dept_info where dept_name in('SALES','RESEARCH')) group by dept_no having count(*)>2;
 
 69.WRITE A QUERY TO DISPLAY EMPLOYEE NAME, JOB,LOCATION OF ALL EMPLOYEES WHO ARE WORKING AS MANAGER AND WORKS AT CHICAGO.
 
-    
+    select ename,designation,location from employee where designation='manager' and deptno=(select deptno from department_info where location='chicago');
 
 70. SELECT ENAME OF EMPLOYEE WHO EARNS 2ND MAX SALARY AND WORKS FOR LOCATION DALLAS.
 
@@ -305,7 +305,7 @@
 
 73.LIST EMPLOYEES WHO HAVE COMMISSION GREATER THAN MAXIMUM SALARY OF ALL THE SALESMAN AND WHO DO NOT REPORT TO KING DIRECTLY .
 
-
+    select * from employee where comm>(select max(sal) from employee where mgr<>'king' group by designation having designation='salesman')
 
 74.DISPLAY THE LOCATION OF ALL THE DEAPRTMENTS WHICH HAVE EMPLOYEES JOINED IN THE YEAR 81
 
@@ -331,9 +331,13 @@
 
     select ename from employee_info where salary in (select max(salary) from employee_info group by designation);
 
-80. DISPLAY THE EMPLOYEE NUMBER AND NAME OF EMPLOYEE WORKING AS CLERK AND EARNING HIGHEST SALARY AMONG CLERKS.
+80.DISPLAY THE EMPLOYEE NUMBER AND NAME OF EMPLOYEE WORKING AS CLERK AND EARNING HIGHEST SALARY AMONG CLERKS.
 
     select emp_id from employee_info where salary=(select max(salary) from employee_info where designation='clerk');
+
+81. WRITE A QUERY TO FIND SMITH'S MANAGER'S MANAGER HIREDATE.
+
+	select hiredate from employee where ename=(select mgr from employee where ename=(select mgr from employee where ename='smith')); 
 
 82.LIST THE NUMBER OF EMPLOYEES WHOSE JOB IS SALESMAN WORKING FOR NEWYORK AND CHICAGO
 
@@ -350,6 +354,7 @@
 85. LIST EMPLOYEES WHO WORKS FOR ACCOUNTING DEPARTMENT AND THEIR SALARY GREATER THAN AVERAGE SALARY OF THEIR DEPARTMENT
 
 	select * from employee where deptno=(select deptno from department_info where dname='accounting' and sal>(select avg(sal) from employee group by deptno having deptno=(select deptno from department_info where dname='accounting')));
+
 86. DISPLAY LOCATION OF THE EMPLOYEE WHO EARN COMMISSION
 
 	select location from department_info where deptno in(select deptno from employee where commission is not null);
@@ -380,7 +385,7 @@
 
 93. DISPLAY DNAME, LOC,DEPTNO OF EMPLOYEES WHO HAS SAME REPORTING MANAGER???
 
-	select dname,loaction,deptno from department_info where deptno=(select deptno from employee group by  
+	select dname,loaction,deptno from department_info where deptno=(select deptno from employee group by rep_mgr having count(*)>=2);  
     
 94. DISPLAY AVG SALARY OF ALL EMPLOYEES WHOSE DEPT NAME IS ACCOUNTING???
 

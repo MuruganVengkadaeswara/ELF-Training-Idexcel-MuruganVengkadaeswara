@@ -77,6 +77,10 @@
 
 20.WAQTD NUMBER OF EMPLOYEE NAMES STARTING WITH AN VOWEL IN EACH DEPARTMENT 
 
+    select count(*) from employee_info where substr(ename,1,1) in ('a','e','i','o','u') group by dept_no;
+
+    (or)
+
     select ename,count(*) from employee_info where ename similar to '(A|E|I|O|U)%' group by dept_no;
     
     (or)

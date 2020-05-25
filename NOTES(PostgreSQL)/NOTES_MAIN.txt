@@ -968,7 +968,7 @@ Expression:
                 syntax
                 ------
 
-                SELECT * from table1 INNER JOIN table2 ON condition;
+                SELECT * from table1 T1 INNER JOIN table2 T2 ON condition(T1.A1=T2.A2);
 
                 T1
                 =============
@@ -998,6 +998,100 @@ Expression:
                 c   |  30  |  c   | 20
                 =======================
 
+        OUTER JOIN
+        ----------
+
+            There are 3 types
+
+                * Left outer join
+                * Right outer join
+                * Full outer join
+
+
+        Left outer join
+        ---------------
+
+
+                The left outer join gives the inner join along with unmatched record in the left table 
+
+
+                syntax
+                ------
+                    SELECT */col_name from table_1 T1 LEFT JOIN table_2 T2  ON condition(T1.A1=T2.A2);
+
+                T1 (Left table)
+                =============
+                 A1   |   B1  
+                -------------
+                  a   |  10
+                  b   |  20
+                  c   |  30
+                  e   |  40
+                =============
+
+
+                T2 (Right table)
+                =============
+                 A2   |   B2  
+                -------------
+                  b   |   30
+                  c   |   20
+                  f   |   10
+                =============
+
+
+                LOJ ---> T1.A1=T2.A2
+                =========================
+                A1  |  B1  |  A2  |  B2
+                -------------------------
+                b   |  10  |  b   |  30
+                c   |  30  |  c   |  20
+                a   |  10  | NULL | NULL
+                e   |  40  | NULL | NULL
+                =========================
+       
+       
+        Right outer join
+        ---------------
+
+
+                The Right outer join gives the inner join along with unmatched record in the Right table 
+
+
+                syntax
+                ------
+                    SELECT */col_name from table_1 T1 RIGHT JOIN table_2 T2  ON condition(T1.A1=T2.A2);
+
+                T1 (Left table)
+                =============
+                 A1   |   B1  
+                -------------
+                  a   |  10
+                  b   |  20
+                  c   |  30
+                  e   |  40
+                =============
+
+
+                T2 (Right table)
+                =============
+                 A2   |   B2  
+                -------------
+                  b   |   30
+                  c   |   20
+                  f   |   10
+                =============
+
+
+                ROJ ---> T1.A1=T2.A2
+                =========================
+                A1  |  B1  |  A2  |  B2
+                -------------------------
+                b   |  10  |  b   |  30
+                c   |  30  |  c   |  20
+                NULL| NULL |  f   |  10
+                =========================
+
+
+
         
-
-
