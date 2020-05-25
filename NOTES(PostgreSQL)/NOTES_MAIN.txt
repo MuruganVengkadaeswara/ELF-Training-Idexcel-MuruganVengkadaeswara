@@ -841,8 +841,29 @@ Expression:
                     SELECT col1,col2... FROM table_name WHERE col1 operator
                     (SELECT col from table_name where expr1=value);
 
+            <ALL and ANY>
 
-              
+            ANY:
+                The ANY operator returns true if any of the subquery values meet the condition.
+
+                syntax
+                -------
+                    SELECT column_name(s)
+                    FROM table_name
+                    WHERE column_name operator ANY
+                    (SELECT column_name FROM table_name WHERE condition);
+
+
+            ALL:
+                The ALL operator returns true if all of the subquery values meet the condition.
+
+                syntax
+                ------  
+                    SELECT column_name(s)
+                    FROM table_name
+                    WHERE column_name operator ALL
+                    (SELECT column_name FROM table_name WHERE condition);
+
 
 
             ASSIGNMENT
@@ -856,4 +877,127 @@ Expression:
                                 insert 6 records
 
             
+
+    JOINS
+    =====
+
+        Joins is used to fetch the data from two or more tables.
+
+        It is used for combining columns from two or more tables by using values common
+        column to both the tables.
+
+        JOIN keyword is used in SQL queries for joining 2 or more tables.
+
+        Minimum reqd condition for joining table is atleast number of tables should be 2.
+
+        TYPES OF JOINS
+        --------------
+
+            * CROSS   JOIN.
+            * INNER   JOIN. 
+            * OUTER   JOIN.
+            * SELF    JOIN.
+            * NATURAL JOIN.
+
+            CROSS JOIN (cartesian join)
+            ---------------------------
+
+            A cross join is used when you wish to create 
+            combination of every row from two tables. 
+            All row combinations are included in the result; this is commonly called cross product join. 
+            A common use for a cross join is to create obtain all combinations of items, such as colors and sizes.
+
+            syntax
+            ------
+
+            SELECT */col_name from table1 cross join table2;
+
+                
+                T2
+                =============
+                 A1   |   B1  
+                -------------
+                  a   |  10
+                  b   |  20
+                  c   |  30
+                =============
+
+
+                T2
+                =============
+                 A2   |   B2  
+                -------------
+                  d   |  300
+                  e   |  200
+                  f   |  100
+                =============
+
+                T1 CROSS JOIN T2
+                =======================
+                A1  |  B1  |  A2  |  B2
+                -----------------------
+                a   |  10  |  d   | 300
+                a   |  10  |  e   | 200
+                a   |  10  |  f   | 100
+                b   |  20  |  d   | 300
+                b   |  20  |  e   | 200
+                b   |  20  |  f   | 100
+                c   |  30  |  d   | 300
+                c   |  30  |  e   | 200
+                c   |  30  |  f   | 100
+                =======================
+
+
+                TOTAL NO OF ROWS = m * n 
+
+                m: no of records in the left table
+                n: no of records in the right table
+
+            
+                    
+            INNER JOIN
+            ----------
+
+                Whenever we join 2 tables with the help of join condition
+                
+
+                An INNER JOIN is such type of join that returns all rows from both the 
+                participating tables where the key record of one table is equal to the key records of another table.
+
+
+                syntax
+                ------
+
+                SELECT * from table1 INNER JOIN table2 ON condition;
+
+                T1
+                =============
+                 A1   |   B1  
+                -------------
+                  a   |  10
+                  b   |  20
+                  c   |  30
+                =============
+
+
+                T2
+                =============
+                 A2   |   B2  
+                -------------
+                  b   |   30
+                  c   |   20
+                  f   |   10
+                =============
+
+
+                T1.A1=T2.A2
+                =======================
+                A1  |  B1  |  A2  |  B2
+                -----------------------
+                b   |  10  |  b   | 30
+                c   |  30  |  c   | 20
+                =======================
+
+        
+
 

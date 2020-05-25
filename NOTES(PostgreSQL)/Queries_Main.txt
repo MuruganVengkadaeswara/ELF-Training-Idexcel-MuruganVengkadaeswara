@@ -399,4 +399,26 @@
 
     select ename from employee_info where hiredate<(select hiredate from employee_info where ename='Gayathri') and salary>(select salary from employee_info where ename='Ahamed');
 
+84. W.A.Q  to cross join dept_info and employee_info>
 
+    select * from employee_info cross join dept_info;
+
+85. W.A.Q to display dept_name,location of all the employee whose salary >=30000?
+
+    select dept_name,location from employee_info e inner join dept_info d on e.dept_no=d.dept_no and salary>=30000;
+
+86. W.A.Q to inner join dept_info and employee_info based on equality of dept_no?
+
+     select * from employee_info e inner join dept_info d on e.dept_no=d.dept_no;
+
+87. W.A.Q to display ename and all the details of the dept if employee is hired after 2015 and working in DEL or BGLR?
+
+    select ename from employee_info e inner join dept_info d on e.dept_no=d.dept_no and hiredate>'2015-12-31' and location in ('DEL','BGLR');
+
+88. W.A.Q to display ename,dname,if the employee name starts with 's' or 'p' and their dname has atleast 1 'e' in it?
+
+    select ename,dname from employee_info e inner join dept_info d on e.dept_no=d.dept_no and (ename like 's%' or ename like 'p%') and dept_name like '%e%';
+
+89. W.A.Q dname and location of all the employee whose salary>=40000?
+
+    select dept_name,location from dept_info d inner join employee_info e on d.dept_no=e.dept_no and salary>=40000;
