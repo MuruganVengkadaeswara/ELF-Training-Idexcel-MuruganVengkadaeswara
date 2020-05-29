@@ -422,3 +422,72 @@
 89. W.A.Q dname and location of all the employee whose salary>=40000?
 
     select dept_name,location from dept_info d inner join employee_info e on d.dept_no=e.dept_no and salary>=40000;
+
+90. W.A.Q to obtain the dept_name which do not have employee working in it?
+
+    select dept_name from dept_info d left join employee_info e on e.dept_no=d.dept_no where emp_id is null;
+
+    (or)
+
+    select dept_name from employee_info e right join dept_info d on e.dept_no=d.dept_no where e.dept_no is null;
+
+91. W.A.Q to obtain employee name who is not working for any department?
+
+    select ename from employee_info e left join dept_info d on e.dept_no=d.dept_no where e.dept_no is null;
+
+92. W.A.Q to round off ?
+
+     select round(432.65);
+
+93. W.A.Q to find modulus?
+     
+     select mod(5,3);
+
+94. W.A.Q to find power?
+
+    select power(3,2);
+
+95. W.A.Q to reverse a string?
+
+    select reverse('hello');
+
+96. W.A.Q to display the current date?
+
+    select current_date;
+
+97. W.A.Q to display the current time?
+
+    select current_time;
+
+98. W.A.Q to calculate your age?
+
+    select age(timestamp '2020-05-29',timestamp '1997-04-27');
+
+99. W.A.Q to get century?
+
+    select extract(century from timestamp '2020-05-29');
+
+100. W.A.Q to get the decade?
+
+    select extract(decade from timestamp '2020-05-29');
+
+101. W.A.Q to extract day?
+
+    select extract(day from timestamp '2020-05-29');
+
+102. W.A.Q to extract day of week?
+
+    select extract(dow from timestamp '2020-05-29');
+
+102. W.A.Q to extract day of year?
+
+    select extract(doy from timestamp '2020-05-29');
+
+103. W.A.Q to extract week of the year?
+
+    select extract(week from timestamp '2020-05-29');
+
+104. W.A.Q to extract month from timestamp?
+
+    select extract(month from timestamp '2020-05-29');
+

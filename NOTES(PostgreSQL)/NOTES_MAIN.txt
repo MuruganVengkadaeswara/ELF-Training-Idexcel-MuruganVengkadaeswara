@@ -10,6 +10,8 @@
 DDL:DATA DEFINITION LANGUAGE +
 ++++++++++++++++++++++++++++++
 
+            All the ddl commands are auto committed
+
             CREATE DATABASE :
             ===================
             3.W.A.Q to create a database?
@@ -88,6 +90,25 @@ DDL:DATA DEFINITION LANGUAGE +
             13.W.A.Q to drop a table?
 
                 drop table table_name;
+
+            TRUNCATE:
+            =========
+
+                truncate table tablename;
+
+                e.g
+                ---
+                truncate table emplo;
+
+                its used to delete the records(not table structure) permenantly.
+               
+                **** Transaction cant be rolled back.
+
+                we cant pass any condition.
+
+            Diff b/w DELETE DROP and TRUNCATE **** ASSIGNMENT(17 may)
+
+                
 
 ASSIGNMENT
 ===========
@@ -669,6 +690,7 @@ Expression:
     
 
             1.Multi Row / Aggregate function:
+            ---------------------------------
 
                 We have n number of inputs and only one output.
 
@@ -693,6 +715,7 @@ Expression:
 
 
             2.Single Row / Scalar function:
+            -------------------------------
 
                  
                  We have n number of inputs and n number of output. 
@@ -705,7 +728,156 @@ Expression:
                     ------>  +           +   ------>
                              +++++++++++++
 
-    CLAUSES:
+                TYPES:
+                ------
+
+                    1.Character single row function
+
+                            * Case
+
+                                upper()
+                                lower()
+                                initcap()
+
+                            * Character
+
+                                length()
+                                
+                                concat()
+                                    select concat(string1,string2);
+
+                                reverse()
+                                    select reverse(string);
+
+                                replace()
+                                    select replace(string,'to_be_replaced','replacement');
+
+                                substr()
+                                    (used to extract substring from a string)
+
+                                    select substr(input_String,position,length);
+                                    
+                                    (if length no specified .... takes up to end)
+
+                                   what to do to get substr from right?
+
+                                    can use right()
+
+
+                                instr()  -----> NOT IN POSTGRES
+                                        
+                                        instead use position()-----> returns index value 
+
+                                        select position(search_string in main_string);
+
+
+                                trim()
+
+                                        select trim([leading/trailing/both]<remove_string> from <main_String>);
+                                
+                                        select trim(leading 'm' from 'madam');
+                                                        
+                                                        ltrim 
+                                                        -------
+                                                        adam
+                                                        (1 row)
+
+                                        select trim(trailing 'm' from 'madam');
+                                                        
+                                                        rtrim 
+                                                        -------
+                                                        mada
+                                                        (1 row)
+
+                                        select trim(both 'm' from 'madmmam');
+                                                        
+                                                  select current_time;      btrim 
+                                                        -------
+                                                        admma
+                                                        (1 row)
+
+                            * NUMBER SINGLE ROW FUNCTIONS:
+
+                                mod()
+                                    modulus
+                                
+                                power()
+                                    power  
+                                        
+                                    select power(3,2); ----> 9
+
+                                round()
+
+                                        round(number,[scale]);
+                                        
+                                        case 1:(Without scale)
+                                        select round(123.4);
+                                        
+                                        case 2:(with scale)
+                                        select round(123.3421,2);--->123.34
+                                        
+                                        
+                                        select round(123.3421,-2);--->100
+
+                                        (-ve scale value means left of decimal point)
+                                        (+ve scale value means right of decimal point)
+
+                                        0-4 prev/lower value
+                                        5-9 next/higher value
+
+                                abs()
+
+                                    used to give the absolute positive value of an integer.
+
+                                trunc()
+
+                                    same as round., but gives always goes for the lower value
+
+
+                                sqrt()
+
+                                    gives the square root of a number.
+
+                    DATE AND TIME FUNCTIONS
+                    -----------------------
+
+                        select current_date; ---> gives the current date
+
+                        select current_time;-----> gives the current time
+
+                        select current_timestamp;|
+                                                 |   
+                        (or)                     |   
+                                                 |  
+                        select clock_timestamp();|          ----> gives current time stamp
+                                                 |
+                        (or)                     |   
+                                                 |   
+                        select now();            |       
+
+                        select age(timestamp '2020-05-29',timestamp '1997-04-27'); ---> gives age
+
+                        select extract(century from timestamp '2020-05-29'); ----> gives current century
+
+                        select extract(decade from timestamp '2020-05-29'); -----> gives current decade
+
+                        select extract(day from timestamp '2020-05-29') -------> gives current day(int)
+                    
+                        select extract(dow from timestamp '2020-05-29');   ----> gives day of week(int)
+
+                        select extract(doy from timestamp '2020-05-29');   -----> gives day of year(int) 
+
+                        select extract(week from timestamp '2020-05-29');  -----> gives week of year(int)
+
+                        select extract(month from timestamp '2020-05-29'); -----> gives month (int)
+
+                        select extract(hour from timestamp '2020-05-29 13:13:23');  ---> gives hour 
+
+
+
+
+
+    CLAUSES:    
     =======
         SELECT , FROM ,WHERE etc..,
 
@@ -1051,8 +1223,8 @@ Expression:
                 =========================
        
        
-        Right outer join
-        ---------------
+        RIGHT OUTER JOIN
+        -----------------
 
 
                 The Right outer join gives the inner join along with unmatched record in the Right table 
@@ -1092,6 +1264,39 @@ Expression:
                 NULL| NULL |  f   |  10
                 =========================
 
+        FULL OUTER JOIN
+        ---------------
+
+                It returns unmatched record from both the left table and right table along with the matches.
+
+            syntax
+            ------
+
+                SELECT */col_name FROM table_1 t1
+                FULL JOIN table_2 t2
+                ON condition(t1.a1=t2.a2);
+
+        NATURAL JOIN
+        ------------
+
+                It will give inner join (if there is common records)(even if condition  is not provided)
+                It will give cartesian join(if there are no common records)
 
 
-        
+            syntax
+            ------
+
+                SELECT */col_name from table_1 NATURAL JOIN table_2;
+
+        SELF JOIN
+        ---------
+
+            join
+
+            syntax
+            ------
+
+                SELECT * from table_1 t1 join table_2 t2 on condition;
+
+
+ 
