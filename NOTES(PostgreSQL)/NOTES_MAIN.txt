@@ -1299,4 +1299,30 @@ Expression:
                 SELECT * from table_1 t1 join table_2 t2 on condition;
 
 
- 
+    ***************************************
+    |TCL -->  Transaction Control Language|
+    ***************************************
+
+                Transaction is a unit of work that is performed against a DB.
+                
+        Properties of Transaction:
+        --------------------------
+
+        A - Atomicity     ----> 
+        C - Consistency   ---->
+        I - Isolation     ---->
+        D - Durability    ---->
+
+        TCL is used with DML commands
+
+        TCL commands:
+
+            * rollback
+            * commit
+            * savepoint
+
+            start with begin;
+
+            end with end;
+
+            
