@@ -108,6 +108,15 @@ DDL:DATA DEFINITION LANGUAGE +
 
             Diff b/w DELETE DROP and TRUNCATE **** ASSIGNMENT(17 may)
 
+              TRUNCATE:
+                -> It will delete the entire data permanently, but table name will not be deleted.
+                -> We cannot use where class in truncate operation.
+
+              DELETE:
+                -> It will delete the entire data but, we can roll back the operation.
+                -> We can use where class in delete operation.
+
+
                 
 
 ASSIGNMENT
@@ -1401,7 +1410,7 @@ Expression:
                     E.G ( in an orthodox patriarchal family, Everyone depends on the Male(father), i.e all the members are dependent on one)
                 
             ii) Partial Functional Dependency
-            ------------------------------------
+            ----------------------------------
                 
                 R--->{A,B,C,D}
                 
@@ -1420,9 +1429,99 @@ Expression:
                 E.G (in modern families, Everyone needn't depend on one i.e it depends on mother and father)
 
             iii)Transitive Functional Dependency
-            -------------------------------------	
+            ------------------------------------
+
+                R--->{A,B,C,D}
+
+                A is KEY attribute.
+                B is NON KEY attribute.
+                    
+                    A--->{B}
+                    A--->{D}
+                    B--->{C}
+                    A--->{C}
+
+                        
+
+                A relation is said to have transitive FD  
+
+                    if there exist a relation such that an attribute is 
+                    determined by a non key attribute which in turn determined
+                    by a key attribute[There exists transitive closure].
+
+                
+        Normalisation:
+        ++++++++++++++
+
+            The process of decomposing the table in to smaller tables in order to
+            remove redundancy and anomalies by identifying the dependencies is known as normalisation.
+
+            (or)
+
+            The process of reducing the table to its normal form is known as normalisation.
 
             
 
+            Normal Form:
+            ------------
 
-            
+                 A state of table without a table redundancy 
+                 and anomaly is known as "Normal Form"
+
+                 tables can be reduced to different levels of Normal form.
+
+
+                Types:
+
+                  ->  1NF
+                  ->  2NF
+                  ->  3NF
+                  ->  BCNF(Boyce-codd Normal form)
+                  -> 4NF
+
+                Table are said to be normalised is its reduced till 3NF.
+
+
+            1NF :
+
+                rules:
+
+                    1. A table should have no duplicates rows
+                    
+                    2. Every cell in a table should be single valued/Atomic value
+
+            2NF :
+
+                rules:
+
+                    1. Table should be in 1NF
+
+                    2. Table should not have partial FD(should not have composite key)
+
+            3NF:
+
+                rules:
+
+                    1.Table should be in 2NF
+
+                    2.Table should not have Transitive FD
+
+                    NOTE: if Transitive FD is present the attribute responsible are removed from the table.
+
+            BCNF:
+
+                rules:
+
+                    1.Table should be in 3NF
+
+                    2.For any dependency A-->B , A should be a super key
+
+            4NF:
+
+                rules:
+
+                    1.Table should be in BCNF
+
+                    2.It should not have multi valued dependency
+
+                
