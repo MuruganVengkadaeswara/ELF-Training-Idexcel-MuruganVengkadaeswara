@@ -1323,6 +1323,106 @@ Expression:
 
             start with begin;
 
-            end with end;
+            end with end;/commit;
+
+
+        NORMALIZATION:
+
+            Key attributes:
+                -> unique characteristics of an entity.
+                -> helps us to uniquely identify a record in a table.
+            
+            Non Key Attributes:
+                -> Other than key attributes all other attributes we have are known as non key attributes.
+            
+            Prime key Attributes:
+                -> It uniquely identifies a record
+            
+            Non prime key attributes:
+                -> Apart from prime key attribute, all other key attributes are non prime key attributes.
+           
+            Composite key Attributes:
+                -> whenever we combine two or more attributes(columns) which helps us to uniquely identifies a record and it is a composite key attribute.
+
+            Super Key:
+                -> The set of all the key attributes of an entity is known as "Super Key"
+
+            Foreign Key:
+                -> It is an attribute which actually access an attribute of another entity
+                   to represent a relationship
+        
+
+        Keys
+
+
+            * Key attr
+            * Non Key attr
+            * Prime Key attr	
+            * Non Prime Key attr
+            * composite Key attr
+            * Super Key 
+            * Foreign Key 
+
+
+        Functional Dependency:
+        ======================
+
+            its a relationship b/w attributes of the table dependent upon each other.
+            
+            helps in preventing data redundancy and anomaly
+
+            
+            R--->{X,Y}  E.g (empId,Name)
+
+            Y is dependent upon X (or) X is determining Y
+
+            empId determines the Name (or) Name is dependent upon empId ---> (Functional dependency)
+            
+            X is determinant.
+
+        Types of Functional Dependency:
+        ------------------------------
+                
+            i)  Total Functional Dependency:
+            ---------------------------------			
+                   
+                    R--->{A,B,C,D}
+
+                        Assume A as KEY Attribute.
+                        
+                        A ---> {B}
+                        A ---> {C}
+                        A ---> {D}
+                    
+                    B,C,D dependent upon attribute A
+
+                    in a relationship all the attributes are determined by one KEY attribute --->(Defines Total FD)
+
+                    E.G ( in an orthodox patriarchal family, Everyone depends on the Male(father), i.e all the members are dependent on one)
+                
+            ii) Partial Functional Dependency
+            ------------------------------------
+                
+                R--->{A,B,C,D}
+                
+                The key is composite.
+
+                A relation is said to have Partial FD if it consists of composite Key attribute.
+
+                There exists a dependency such that an attribute can determined by another attribute.
+                
+                Assume {A,B} ----> composite key (can uniquely identify the record)
+
+                {A,B} ---> {C}
+                {A,B} ---> {D}
+                {A,B} ---> {C,D}
+            
+                E.G (in modern families, Everyone needn't depend on one i.e it depends on mother and father)
+
+            iii)Transitive Functional Dependency
+            -------------------------------------	
+
+            
+
 
             
