@@ -491,3 +491,18 @@
 
     select extract(month from timestamp '2020-05-29');
 
+105. create a view from employee table where dept_no is 30?
+
+     create view abc as select ename,designation from employee_info where dept_no=30;
+
+106. W.A.Q to create a stored procedure to insert data?
+
+        create procedure insert_data(integer,text)
+        language 'plpgsql'
+        as $$
+        begin 
+        insert into per_info values($1,$2);
+        commit;
+        end;
+        $$;
+

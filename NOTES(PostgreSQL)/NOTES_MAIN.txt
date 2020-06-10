@@ -1524,4 +1524,79 @@ Expression:
 
                     2.It should not have multi valued dependency
 
+
+        VIEW
+        ====
+
+             -> View is a virtual table (or) pseudo table that can be 
+                created on existing table
+
+             -> A view is same as table (it has rows and columns)
+
+             -> whenever a DML operation is made on view it is reflected in base table.
+
+             -> A view can either have specific row based on certain condition
+                or all the rows of the table.
+
+             -> VIEWS ARE PURE METADATA
+
+             (a view is just a projection ,,... may be metadata... its not actually
+             present ,Like REFERENCE)
+
+             syntax
+             -------
+
+                CREATE VIEW view_name
+                AS 
+                SELECT * FROM table_name where condition;
+
+
+            use command \dv ---> to list(describe) all the views.
+
+            To drop a view:
+            ---------------
+
+                DROP VIEW VIEW_NAME;
+
+        STORED PROCEDURES(SP):
+        ======================
+
+            if same set of task is performed many times ---> go for SP
+            (like function)
+
+            syntax
+            ------
+                ***lang_name like --> PLSQL,PLpgSQL***
+
+                CREATE [OR REPLACE] procedure procedure_name(parameter_list)
+                LANGUAGE 'lang_name' 
+                AS 
+                $$
+                   /Stored procedure body/
+                $$;
+
+                \df  ----> to describe procedure
+
+
+                E.G
+
+                    create procedure insert_data(integer,text)
+                    language 'plpgsql'
+                    as $$
+                    begin 
+                    insert into per_info values($1,$2);
+                    commit;
+                    end;
+                    $$;
+
+                calling the procedure:
+                ======================
+
+                    CALL procedure_name(values);
+
+                    we can write if else in SP.
+        
+        TRIGGERS:
+        =========
+
                 
