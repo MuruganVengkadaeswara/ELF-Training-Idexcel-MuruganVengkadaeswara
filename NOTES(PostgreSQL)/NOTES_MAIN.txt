@@ -1596,6 +1596,71 @@ Expression:
 
                     we can write if else in SP.
         
+        FUNCTIONS:
+        ==========
+
+            To create a function
+
+            syntax
+            ------
+
+                CREATE FUNCTION function_name(Parameters)
+                RETURNS return_datatype
+                AS 
+                $$                    ---> start         
+                 declare declaration;
+                 begin
+                 <function body>
+                 return{variable/value};
+                 end;
+                $$
+                Language SQL/plpgsql;   
+
+                E.G (without parameters)  ---> TO FIND NO OF RECORDS in TABLE 
+                ------------------------
+
+                    create function tot_rec()
+                    returns integer as $$
+                    declare rows integer;
+                    begin
+                    select count(*) into rows from employee_info; 
+                    return rows;
+                    end;
+                    $$
+                    language plpgsql;
+
+                E.G (With Parameters)   ----> TO FIND MIN AND MAX OF 3 NO's
+                ----------------------
+
+                    *** We should use IN if we give input arguments.(not mandatory for postgresql) 
+                    *** We should use OUT if we have to get output. (mandatory for postgresql)
+                  
+                    create function maxmin(a integer,b integer,c integer,OUT max integer,OUT min integer)
+                    AS $$
+                    begin
+                    max=greatest(a,b,c);
+                    min=least(a,b,c);
+                    end;
+                    $$
+                    language plpgsql;
+
+
+
+
+            HOW TO CALL FUNCTION?  (NOTE THE DIFF b/w procedure call and function call)
+
+                syntax
+                ------
+
+                select function_name();
+
+                (or)
+
+                select function_name(parameter_list);
+
+
+
+
         TRIGGERS:
         =========
 

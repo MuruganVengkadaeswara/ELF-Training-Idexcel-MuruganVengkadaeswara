@@ -506,3 +506,28 @@
         end;
         $$;
 
+107. W.A.Q to create a function to count number of records?
+
+        create function tot_rec()
+        returns integer as $$
+        declare rows integer;
+        begin
+        select count(*) into rows from employee_info; 
+        return rows;
+        end;
+        $$
+        language plpgsql;
+
+108. W.A.Q to create a function to find max and min of 3 numbers?
+
+
+        create function maxmin(a integer,b integer,c integer,OUT max integer,OUT min integer)
+        AS $$
+        begin
+        max=greatest(a,b,c);
+        min=least(a,b,c);
+        end;
+        $$
+        language plpgsql;
+
+109.
