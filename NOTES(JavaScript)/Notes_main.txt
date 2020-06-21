@@ -1,0 +1,271 @@
+ HTML
+ CSS
+ Javascript
+
+ Javascript --> Scripting Language,
+                Dynamic
+                Validate at the frontend
+                runs on client side (Browser)
+        
+        Javascript is case sensitive.
+
+NetScape --> Brendon Eich 1995
+             
+             Mocha ---> Live Script ---> Javascript
+
+             Java           Javascript
+             
+             car            carpet   
+
+    ECMA --> European Computers Manufacturer's Association
+
+        ECMA maintains the standards for Scripting Languages  
+
+    Javascript's name is changed to ECMA Script 
+    
+    ES1 1997
+    
+    ES7 2017
+
+    JS documentation --> Mozilla Developers maintains
+
+Advantages of Javascript:
+-------------------------
+
+    1.Less server interaction.
+    
+    2.Better perfomance.
+
+    3.Rich in Interface.
+
+    4.more interactive
+
+
+Compiler Characteristics:
+-------------------------
+
+    -> Spends lot of time analysing and processing
+       the program.
+    -> the resulting executable is some form of 
+       machine-specific binary code.
+    -> the computer hardware interprets(executes)
+       the resulting code.
+    -> Program execution is fast.
+
+interpreter Characteristics:
+----------------------------
+
+    -> relatively little time is spent analysing and 
+        processing the program
+    -> the resulting code is some sort of intermediate
+        code
+    -> the resulting code is interpreted by another 
+        program
+    -> program execution is relatively slow
+
+
+Javascript Engine:
+==================
+
+    Chrome             --> V8
+    firefox,NetScape   --> SpiderMonkey
+    Mozilla            --> Rhino
+    IE/Edge            --> Chakra
+    safari             --> JSCore
+    Opera              --> V8  -> carakan
+
+
+
+    V8  -- GOOGLE's
+
+    -> Multi Threaded program written in c++
+    -> Converts to binary code
+    -> 
+
+    Fullcodegen --> It consumes entire JS code and 
+                    compiles just before Execution.
+                    Just-In-Time compiler
+
+                     a simple and very fast compiler 
+                     that produced simple and relatively
+                     slow machine code.
+
+    crankshaft  --> monitors the code being compiled
+                    for hot segment
+
+                    a more complex (Just-In-Time) optimizing 
+                    compiler that produced highly-optimized code.
+
+    (hot segment is the code which gets more hits
+        E.g for loop)
+
+    main thread     --> fetch--> compiles--> execute
+    compiler thread --> fullcodegen && crankshaft
+    profiler thread --> it monitors the code
+    GC thread       --> Garbage collector
+
+    ways to add Javascript:
+    ------------------------
+
+     There are three ways
+
+        1.Inline
+        2.Internal/Embedded
+        3.External
+
+
+bag         --> books
+container       content
+
+|||y
+
+variable    --> data
+container      content
+
+var identifier/var_name;
+
+var is the keyword (see also let .., const)
+
+var_name = value;
+
+DataType --> It defines the type of data
+
+1. Identifier must begin with a-z (or) A-Z (or) _ (or) $
+2. it can contain numbers(Alpha Numeric)
+3. it is case sensitive.
+    (i.e  x is different from X)
+
+ some valid var_names:
+    _name12
+    $abc
+    num123
+
+ some invalid var_names:
+    123ac
+    %2as
+    num!s
+
+DataTypes in Javascript:
+========================
+
+ There are 2 main DataTypes
+    
+    1.primitive
+        
+        * number
+        * string
+        * null
+        * boolean
+        * undefined
+
+    2.Reference/Non primitive
+
+        * Array
+        * Object
+        * Date
+        * Math
+        * Functions
+
+    var Identifier = value;
+
+    ; is not mandatory --> ask why?
+
+    String is given inside:
+
+        "" , '' , ``
+
+        ``(Bad ticks)
+
+        E.g
+
+        var name = 'abc';
+        var name = "abc";
+        var name = `abc`;
+
+    Null can be initialised using null keyword.
+
+        E.g var name = null;
+
+    boolean value is given using true and false. 
+
+        E.g var value = true;
+
+    undefined ---> no definition only declaration.
+
+        var name;
+
+Array
+======
+
+    1. Array is a collection of data
+    2. it can be homogeneous / heterogeneous in js.
+
+    Array can be declared by in two ways:
+
+        1. by using []
+        --------------
+        syntax:
+            var array_name = [values seperated by ,]
+        E.g
+         var array_name = [1,2,3,4,5];
+
+        2. by using new keyword
+        ------------------------
+        syntax:
+            var array_name = new Array(values);
+        E.g 
+         var array_name = new Array(10,20,30);
+
+Object
+=======
+
+    Object is an entity which has 
+        * states
+        * behaviors
+
+    E.g
+
+        Book 
+
+            states   - no_of_pages,Weight,title
+            behavior - show(),throw()
+
+    syntax:
+    ======
+
+     var obj_name = {
+        
+        key:value,
+        key1:value1,
+
+     }
+
+
+    var student = {
+        id:1,
+        name:'abc',
+        city:'BLR'
+    }
+
+    
+xxxxxxx   IMPORTANT POINTS  xxxxxxx
+
+
+    we can have array inside array.
+    (see Multi Dimensional array)
+
+    we can have array inside object.
+
+    we can have object inside array.
+
+Why array index starts with 0 not 1?
+
+    a[n] be an array
+
+    n should not be treated as an index, 
+    but as an offset from the array's head.
+
+
+    statement
+    ----------
+      
