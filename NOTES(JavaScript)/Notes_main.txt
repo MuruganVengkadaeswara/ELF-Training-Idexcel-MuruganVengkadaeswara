@@ -269,3 +269,120 @@ Why array index starts with 0 not 1?
     statement
     ----------
       
+      A statement is an instruction/line of code
+      that yields some result.
+
+      operands 
+      ========
+
+        there are 2 types of operands
+
+            1.variables
+            2.literals
+
+      operators
+      =========
+
+            it has some specific functionality
+
+            1. Arithmetic   
+            2. Comparision/relational
+            3. logical
+            4. ternary
+            5. typeof
+
+        uses of the console
+        ===================
+
+        1.logging purpose
+        2.can check the errors
+        3.run the js code
+
+
+
+Arithmetic operators:
+=====================
+
+    + , - , * , / , % , ++ , --
+
+        the usual.
+
+    pre-increment / post-increment (also see)
+
+    pre-increment          
+    -------------
+    1. the value gets     
+       incremented
+    2. substitute the 
+       value
+    3. operation 
+
+    post-increment
+    --------------
+    1. substitute the 
+       value
+    2. operation
+    3. increment
+
+Comparision/relational
+======================
+
+    ==
+    !=
+    >
+    <
+    >=
+    <=
+    ===
+    !==
+
+    === and !== are strictly equals and strictly not equals
+    it also checks for the DataType along with data
+
+logical
+=======
+
+    and  
+    or
+    not
+
+ternary
+=======
+
+    condition ? trueStatement : falseStatement
+
+
+    greatest of 3 numbers using ternary operators
+
+        (a>b)?((a>c)?a:c):((b>c)?b:c);
+
+typeof
+======
+
+    it returns the typeof data
+
+    number --> number
+    String --> String
+    boolean --> boolean
+    Null   ---> Object  #### NOTE
+    undefined --> undefined
+
+    Array --> Object
+    Object --> Object
+
+    to check if array is array (to return boolean)
+    use isArray(array_name) method from Array class
+
+        Array.isArray(myArray);
+
+The template literal
+====================
+
+    to include a variable inside string
+
+    ${var_name}
+
+    can be used with `` (only)
+
+    var a=10;
+    console.log(`HEllo ${a}`)
