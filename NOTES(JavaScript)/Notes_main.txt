@@ -34,7 +34,7 @@ Advantages of Javascript:
 
     1.Less server interaction.
     
-    2.Better perfomance.
+    2.Better performance.
 
     3.Rich in Interface.
 
@@ -279,6 +279,9 @@ Why array index starts with 0 not 1?
 
             1.variables
             2.literals
+        
+        An operand is something on which an operation is made
+
 
       operators
       =========
@@ -386,3 +389,66 @@ The template literal
 
     var a=10;
     console.log(`HEllo ${a}`)
+
+Functions
+=========
+
+    Set of code to performance/Instruction to perform
+    a dedicated task.
+
+ Types:
+=======
+    1. Named Functions
+    2. Function Expression
+    3. IIFE (Immediately invoked Function Expression)
+    4. ES6 arrow function
+
+1.Named Function:
+
+    syntax:
+
+        function function_name(Args){
+
+            return value; //optional
+        }
+
+2.Function Expression:
+
+    syntax:
+
+        var someVar = function (args) { 
+
+        };
+
+        someVar();
+
+3.IIFE :
+
+    syntax:
+
+        (function(params){
+            //statement
+
+        })(params)  //dont give semi colon here
+
+4. Arrow Function:
+
+    syntax:
+
+       var myVar = () => {
+           //statement
+       }
+
+       => --> called fat arrow
+
+
+input args ==> all primitive DataTypes
+               Array
+               Object
+               function  
+
+return type ==> all primitive DataTypes
+               Array
+               Object
+               function  
+               can't return multiple values
