@@ -29,9 +29,10 @@ fibonacci(8);
 
 //IIFE - IMMEDIATELY INVOKED FUNCTION EXPRESSION (   Number)
 
-(function () {
-    console.log("Hello world");
-})();
+(function (x, y) {
+    console.log(`The Square of 2 numbers ${Math.pow(x, y)}`);
+
+})(3, 2);
 
 // ES6 arrow function (Reverse of string)
 
