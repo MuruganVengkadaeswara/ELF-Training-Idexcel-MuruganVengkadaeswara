@@ -216,6 +216,44 @@ Array
         E.g 
          var array_name = new Array(10,20,30);
 
+
+    to have empty value in array
+
+        1. we can skip assigning the index 
+           
+        2. we can skip assigning the index by 
+           using comma  i.e [1,,2,3] 
+
+        3. we can have some key in the place 
+           of an index
+
+           arr['name']='mv'
+
+           this is not included in the length
+           but can accessed by key 
+
+
+            
+
+             
+xxxxxxx   IMPORTANT POINTS  xxxxxxx
+
+
+    we can have array inside array.
+    (see Multi Dimensional array)
+
+    we can have array inside object.
+
+    we can have object inside array.
+
+Why array index starts with 0 not 1?
+
+    a[n] be an array
+
+    n should not be treated as an index, 
+    but as an offset from the array's head.
+
+
 Object
 =======
 
@@ -247,23 +285,6 @@ Object
         city:'BLR'
     }
 
-    
-xxxxxxx   IMPORTANT POINTS  xxxxxxx
-
-
-    we can have array inside array.
-    (see Multi Dimensional array)
-
-    we can have array inside object.
-
-    we can have object inside array.
-
-Why array index starts with 0 not 1?
-
-    a[n] be an array
-
-    n should not be treated as an index, 
-    but as an offset from the array's head.
 
 
     statement
@@ -282,6 +303,23 @@ Why array index starts with 0 not 1?
         
         An operand is something on which an operation is made
 
+    
+xxxxxxx   IMPORTANT POINTS  xxxxxxx
+
+
+    we can have array inside array.
+    (see Multi Dimensional array)
+
+    we can have array inside object.
+
+    we can have object inside array.
+
+Why array index starts with 0 not 1?
+
+    a[n] be an array
+
+    n should not be treated as an index, 
+    but as an offset from the array's head.
 
       operators
       =========
@@ -399,7 +437,7 @@ Functions
  Types:
 =======
     1. Named Functions
-    2. Function Expression
+    2. Function Expression /Anonymous function
     3. IIFE (Immediately invoked Function Expression)
     4. ES6 arrow function
 
@@ -439,6 +477,15 @@ Functions
            //statement
        }
 
+        NOTE:
+
+            if there is only one param or argument
+            we can omit () in arrow function
+
+            if there is only one statement inside the
+            function we can omit {} in arrow function
+
+
        => --> called fat arrow
 
 
@@ -452,3 +499,277 @@ return type ==> all primitive DataTypes
                Object
                function  
                can't return multiple values
+
+
+    Static typing
+    -------------
+
+        e.g --> Java
+
+        the DataType is defined and must 
+        be same as definition
+
+        we cannot store different types
+    
+    Dynamic typing
+    --------------
+
+        e.g --> Javascript
+
+        the DataType stored can be any
+
+    NOTE: TypeScript supports static typing
+
+
+Date 
+=====
+
+  there are four overloaded constructors
+
+    1. new Date()
+    2. new Date(year,month,day,hours,mins,secs,ms)
+    3. new Date(ms)
+    4. new Date(date String)
+
+    "month day,year HH:MM:SS" --> date string format
+
+
+    NOTE:
+
+        month starts from 
+         
+         jan -- 0
+         feb -- 1
+         .
+         . 
+         .
+         dec -- 11
+
+        days
+
+         sun - 0
+         mon - 1
+         .
+         .
+         .
+         sat - 6
+
+         secs , mins --> 0 to 59
+
+         hours --> 0-23
+
+
+    Date Object methods
+    ====================
+
+    getFullYear()    ---> get the year in YYYY format
+    getMonth()       ---> get month as number (0-11)
+    getDate()        ---> get Day as number (1-31)
+    getHours()       ---> get the hour (0-23)
+    getMinutes()     ---> get the minute (0-59)
+    getSeconds()     ---> get the seconds (0-59)
+    getMilliseconds()---> get the milliseconds (0-999)
+    getTime()    |
+                 |   ----> return milliseconds from jan 1 1970
+    Date.now()   |
+
+    Math object
+    ===========
+
+     math object has many useful functions for 
+     basic mathematical operations
+
+
+     control structures
+     ==================
+
+     control structures are used to control the flow of code.
+     in other words it decides how the control is transfered.
+
+     1.if
+
+        syntax
+        ------
+
+            if(condition)
+            {
+                //statements
+            }
+
+            use if when you have one condition 
+            to check and one block
+
+    2.if else
+
+        syntax
+        ------
+
+            if(condition){
+                //if block statement
+            }
+            else
+            {
+                //else block statement
+            }
+
+    3.if else if
+
+       syntax
+       ------
+
+           if(condition){
+               //statement
+           }
+           else if(condition1){
+               //statement
+           }
+           else if(condition2){
+               //statement
+           }
+           else{
+               //statement
+           }
+
+    4.switch
+
+        syntax
+        ------
+
+            switch(value)
+            {
+                case 1: 
+                    //statement
+                    break;
+                    
+                case 2: 
+                    //statement
+                    break;
+                case 3: 
+                    //statement
+                    break;
+                default:
+                    //statement
+                    break;
+
+            }
+
+        //see also free flowing switch
+        //usage of break 
+
+    Loops
+    =====
+
+        1.while
+        2.do while
+        3.for
+        4.for in
+        5.for of
+        6.forEach
+
+
+    1.while
+
+        syntax
+        ------
+
+            while(condition)
+            {
+                //statements
+            }
+
+            the statements are executes until the condition 
+            is false.
+            
+
+    2.do while
+
+        syntax
+        ------
+
+            do
+            {
+                //statements
+            }while(condition)
+    
+    3.for
+
+        syntax
+        ------
+
+            for(stmt1;stmt2;stmt3)
+            {
+                //code 
+            }
+
+            stmt1 : init phase
+            stmt2 : condition
+            stmt3 : update / counter ++,--
+
+            1.it does not work with object
+            2.it does not ignore empty
+            3.break is supported
+            4.ignores extra properties without index value
+
+    4.for of    
+
+        for of returns the value not index
+
+        syntax
+        ------
+
+            var varname;
+
+            for(varname for arrayname){
+                //statement
+            }
+
+        1.it will not work with object
+        2.it does not ignore empty value
+        3.break is supported
+        4.ignores the extra properties without index value
+
+    5.for in    
+
+        it returns index for array
+        it returns key for object
+
+        syntax
+        ------
+
+            var varname;
+
+            for(varname in object/arrayname){
+                //statement
+            }
+
+        1.it will work with object
+        2.it ignores empty value
+        3.break is supported
+        4.it does not ignore the extra properties without index value
+
+
+
+JSON
+====
+ Javascript Object Notation
+
+ {
+     'name' : 'value'
+     'age'  : value
+     'full-name' : value
+ }
+
+ XML
+=====
+
+ <person>
+    <name>mv</name>
+ </person>
+
+
+ NOTE:
+ ----
+
+    . will work perfectly with proper Identifier in JSON
+
+   i.e object.key  
