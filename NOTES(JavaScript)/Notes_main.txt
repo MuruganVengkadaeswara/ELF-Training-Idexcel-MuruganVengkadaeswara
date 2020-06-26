@@ -770,6 +770,9 @@ JSON
  NOTE:
  ----
 
-    . will work perfectly with proper Identifier in JSON
+    1.  period (.) will work perfectly with proper Identifier in JSON
 
-   i.e object.key  
+           i.e object.key  
+
+    2.  insert debugger anywhere inside loop / block / code 
+        to debug in the browser console
