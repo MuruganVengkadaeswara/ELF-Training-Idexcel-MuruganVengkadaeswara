@@ -248,3 +248,16 @@ function concat(...args) {
 }
 
 //the flat() method will recursively concat the sub array elements
+
+
+//21.Doubled Pay
+
+function doubledPay(n) {
+    let pay = 0;
+    for (let i = 0; i < n; i++) {
+        pay += (2 ** i);
+    }
+    return pay;
+}
+
+// '**' is the exponent operator
