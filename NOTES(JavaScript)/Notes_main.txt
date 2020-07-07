@@ -776,3 +776,218 @@ JSON
 
     2.  insert debugger anywhere inside loop / block / code 
         to debug in the browser console
+
+
+
+
+
+
+
+Passing one function to another function --- > callBack Function
+
+
+filter(callBack(value,index))
+==============================
+
+    arr = [1,2,3,4,5,6]
+
+    array_name.filter(function(value,index){
+        if(condition)
+            return true;
+        else
+            return false;
+    });
+
+    true --> value will be removed
+    false ---> value will not be removed
+
+some array methods:
+===================
+
+  ->  indexOf(searchElement , fromIndex) --> number
+
+  ->  push(items) -- its used to insert the value at 
+                   last index
+            
+            items can be single / multiple values
+            returns the number of elements 
+ 
+  -> pop()  -- it removes the element at the last
+               index element
+
+    pop() and push()  --> for last index
+
+    unshift(item) -- insert the value at first index
+
+        item -- single / multiple values
+        returns the number of element
+
+    shift() -- removes the element from the first index
+
+    join(seperator)  --> string
+
+    splice(sat) 
+
+
+VARIABLE HOISTING:
+==================
+	-> Moving the declaration at the top.
+	-> It will move only the declaration and it will never moves initialization
+	-> It is used to avoid bugs.
+
+	TYPES:
+	1. Global Variable Hoisting
+	2. Local Variable Hoisting
+
+CALL STACK:
+===========
+	1. It keeps the record of the functions that we called.
+	2. It works similar to stack(LAST IN FIRST OUT).
+
+STRING METHODS:
+===============
+
+	1. toLowerCase():
+		converts string value to lower case.
+	2. toUpperCase():
+		converts string value to Upper case.
+	3. charAt(position):
+		returns the character at the specified index.
+	4. indexOf(searchString,position):
+		return the index of first occurence of that search string.
+		-> If position is specified it starts checking from that specified index.
+	5. concat(string1,string2,....string n):
+		It will concate multiple string values into a single string.
+	6. includes(start_indexstart ,position)
+		It will chack if the value is present in the string or not
+		-> It will return boolean value.
+	7. replace(search value, replace value)
+		-> It will replace an existing character with the newly specified character.
+		-> If no replace value is passed then the search value is replaced with undefined.
+		eg:- replace('m') -> 'm' will be replaced with undefined.
+	8. subString(start,length):
+		-> It will create a sub string for the original string value.
+	9. trim():
+		-> It will remove all the unwanted white spaces in the start of the string.
+
+BROWSER OBJECT MODEL( BOM ):
+============================
+	Using BOM we can interact with the browser.
+
+	Window(object):
+		It will be present in all the browser.
+		-> Every global variable are automatically becomes the properties of Window Object
+		-> Every global methods are automatically becomes the functions of Window Object.
+			
+		Inbuild properties of Window object:
+		1. innerHeight:
+			Display height of the page(only content area)
+		2. innerWidth:
+			Display width of the page(only content area)
+
+		Inbuild Methods of Window Objects:
+		1. prompt():
+			It is used to take the user input.
+		2. alert():
+			It is used to give some message or Notification.
+		3. confirm():
+			It returns either true or false.
+			-> If you click on 'OK' then it returns true.
+			-> If you click on 'CANCEL' then it returns false
+		4. open():
+			-> It It is used to open a new tab.
+		5. close():
+			-> close the current tab.
+		6. console():
+			-> We can call log() method using console Object
+				eg:-
+				console.clear() -> It will clear the console.
+
+	History(Object):
+    =================
+		-> There are no properties.
+		
+		Methods:
+		1. back():
+			-> It is used to navigate from current page to previous page.
+		2. forward():
+			-> It is used to navigate from current page to Next page.
+
+	URL:
+    ====
+
+		URL Pattern: 
+			protocol://hostname:port/pathname
+			
+			Protocol -> It is the mediator between browser and server. This is not mandatory, as browser will provide internally.case INSENSITIVE.
+					TYPES:
+					1. HTTP -> It will not Encrypt the data. So it is not secured
+					2. HTTPS -> It Encrypts the data. So, it is secured
+			Hostname -> where our web pages are located. It can be IP address or Computer Name. It is mandatory. case INSENSITIVE
+			Port number-> number where the server is located.It is not mandatory
+			path name -> name of the path.not mandatory. case SENSITIVE.
+
+	Location(Object):
+    =================
+
+		-> It helps us to get Hostname,port number, path name,etc.
+		-> It has no methods.
+
+		PROPERTIES OF LOCATION OBJECT:
+        ===============================
+		1. location.href -> It will provide the complete url of a page.
+		2. location.protocol -> It will provide the protocol of a page.
+		3. location.hostname -> It will provide the hostname of a page.
+		4. location.port -> It will provide the port number of a page.
+		5. location.pathname -> It will provide the path name of a page.
+		
+
+DOCUMENT OBJECT MODEL:
+======================
+
+		- It is an programming interface for HTML and XML, which can be modified using Scripting language(JS).
+		- It doesn't affect Original HTML code.
+		- Browser provides DOM.
+
+
+	- Everything is Node in DOM.
+	NODE -> Node can be an Object,element, etc,...
+
+	1. Entire HTML page is converted into DOM and will be displayed in the browser.
+	2. What we see in a browser is based on DOM.
+	
+	W3C standard:
+	- It is platform & language neural interface.
+
+	Three Types of DOM:
+	1. Core DOM - for all type of document
+	2. XML DOM - for XML document.
+	3. HTML DOM - for HTML document.
+
+	HTML DOM:
+    =========
+	- Using this HTML DOM , JavaScript gets all the power to make our web pages Dynamic.
+	
+		Functions:
+		1. We can change the HTML elements in pages.
+		2. We can change the attributes of elements in pages.
+		3. We can add CSS Styles.
+		4. We can remove the existing Attributs/Elements.
+		5. We can add new Attributes/Elements.
+		6. We can create/react events.
+		
+		DOM TREE:
+        ==========
+		1. Always 'Document' should be the root element of all elements.
+
+					Document
+
+				       Document Type
+		
+					 HTML
+
+			Head				Body
+			
+			Title				p	h2	script
+
+			#Content		    #Content #Content  #Conten
