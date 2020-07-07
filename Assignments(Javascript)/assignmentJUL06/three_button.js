@@ -1,9 +1,5 @@
 
 var element = document.createElement('p');
-
-var count = 0;
-
-
 function create() {
     element.innerHTML = "Hello world";
     console.log('element created');
