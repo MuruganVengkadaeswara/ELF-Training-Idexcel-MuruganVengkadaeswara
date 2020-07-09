@@ -991,3 +991,13 @@ DOCUMENT OBJECT MODEL:
 			Title				p	h2	script
 
 			#Content		    #Content #Content  #Conten
+
+
+
+
+Can we create multiple elements using createElement()?
+
+    var element = document.createElement(tagName[, options]);
+
+    it returns new element
+
