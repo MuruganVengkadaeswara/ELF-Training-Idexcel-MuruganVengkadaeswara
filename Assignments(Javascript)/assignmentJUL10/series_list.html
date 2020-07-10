@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Series List</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="series_list.css" />
+  </head>
+  <body>
+    <div style="display: flex;">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 boxcommon" id="seriesbox">
+        <h1>
+          Favorite Series List
+        </h1>
+        <input type="text" name="" id="box" class="form-group" />
+        <button onclick="add(this.id)" id="add_1" class="btn btn-primary">
+          Add
+        </button>
+        <button onclick="remove(this.id)" id="rm_1" class="btn btn-danger">
+          Remove
+        </button>
+        <ul id="list">
+          <li onclick="removeClick(this)">Peaky Blinders</li>
+          <li onclick="removeClick(this)">Breaking Bad</li>
+          <li onclick="removeClick(this)">Mr.ROBOT</li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 boxcommon" id="moviebox">
+        <h1>
+          Favorite Movies List
+        </h1>
+        <input type="text" name="" id="box1" class="form-group" />
+        <button onclick="add(this.id)" id="add_2" class="btn btn-primary">
+          Add
+        </button>
+        <button onclick="remove(this.id)" id="rm_2" class="btn btn-danger">
+          Remove
+        </button>
+        <ul id="list1">
+          <li onclick="removeClick(this)">Avengers:Endgame</li>
+          <li onclick="removeClick(this)">Schindler's list</li>
+          <li onclick="removeClick(this)">Ravanan</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="series_list.js"></script>
+  </body>
+</html>

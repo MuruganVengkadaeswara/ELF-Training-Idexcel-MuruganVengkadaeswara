@@ -1,0 +1,33 @@
+#seriesbox {
+    background-color: blanchedalmond;
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#moviebox {
+    background-color: beige;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.boxcommon h1 {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.boxcommon {
+    padding: 20px;
+}
+
+.boxcommon input[type=text] {
+    margin-left: 150px;
+}
+
+
+
+.boxcommon ul {
+    margin-left: 150px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
