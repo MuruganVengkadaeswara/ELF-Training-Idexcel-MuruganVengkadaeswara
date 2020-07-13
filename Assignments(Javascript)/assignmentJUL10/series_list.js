@@ -53,7 +53,10 @@ function add(but_id) {
     else {
         var li = document.createElement('li');
         li.innerHTML = to_add;
-        li.setAttribute("onclick", "removeClick(this)");
+        li.addEventListener("click", function () {
+            removeClick(this);
+        });
+        // li.setAttribute("onclick", "removeClick(this)");
         corr_ul.appendChild(li);
     }
 }
