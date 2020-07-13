@@ -996,8 +996,155 @@ DOCUMENT OBJECT MODEL:
 
 
 Can we create multiple elements using createElement()?
+    
+    Not Possible
 
     var element = document.createElement(tagName[, options]);
 
     it returns new element
 
+EVENT:It is an Action like 
+		-> Hover, click, submit,...
+	EventListener: It will tell that there is an action and somebody needs to handle it.
+			-> Attribute is the EventListener in JS.
+			-> Attributes are onClick, onSubmit, onMouseHover.
+	EventHandler: It handles the action. 
+			-> Function is the EventHandler in JS.
+
+	innerText:
+		-> It will only returns the content.		
+		-> Retrieves the data and set content of tag as a plain text.
+	innerHTML::
+		-> It returns the entire element.
+		-> It retrieves the data and set content as HTML format.
+	
+	DOM METHODS:
+
+	1. write() -> The content inside the write method will be displyed inside the html page.
+		   -> It will be loaded, once after the entire html page is loaded and it will delete other existing html elements and it will add new content.
+		NOTE:
+		1. we can pass objects, variables, tags etc,...
+
+	2. open() -> It opens the output stream to write.
+	3. close() -> It will close the output stream to write.
+	4. writeln() -> It is similar to java println() method.
+		     -> We have to use pre tag inorder to use writeln().
+	5. createElement(element):
+		ex -> document.createElement('h1')
+		   -> we can create an specified element by using createElement 
+		   -> element -> tagName
+		   -> return -> 
+
+	CHANGE THE CONTENT:
+
+	6. getElementById(id name):
+		-> returns the only element with the specified id.
+	7. gatElementByTagName(tag_name):
+		-> It will collect all the tags with specified tag name and it will create HTML collection object.
+		-> Return Type = HTML Object with only specified Tag Name.
+		-> We can iterate through for in method.
+		
+
+	8. getElementByClassName(class_name):
+		Return Type = HTML Object having all the tags with same class name as specified
+
+	9. getElementByName(name):
+		-> return Type = NodeList Object.
+
+		ex:
+			var x=document.getElementsByName('simple');
+			for(var key in x)
+			{
+				x[key].style.color='blue';
+			}
+		
+	CHANGE THE STYLES:
+
+	10. querySelector(tag or id or class):
+		-> We use querySelector inorder to change the styles.
+		-> It will return the very first element with the specified tag/classname/id.
+	11. querySelectorAll(tag or id or class):
+		-> It will return all the tags with specified TagName/className.
+
+	
+	APPEND:
+
+	12. appendChild();
+		-> it will add new element to page.
+
+	13. insertBefore(newchild, existing child location)
+		-> It will add new element at the sepecified location.
+		Example:
+			insertBefore(x, document.body.chileNodes[location starts from 0 to end]. (OR) insertBefore(x, ul.childNaodes[5]);
+
+		Properties:
+		1. firstchild
+		2. firstElementChild
+		3. lastElementChild
+
+	REMOVE:
+
+	14. remove():
+		-> Remove all the content/clears the current page.
+		-> Is good to not use this remove() method.
+
+	15. removeChild():
+		-> It is used to remove the child of an Element. EX-> Remove a list child from Unordered List.
+
+		var x=dicument.getElementById('val'); ------> getting ul element
+		x.removeChild(x.lastElementChild.PreviousElementSibling);
+
+	REMOVE PARTICULAR ELEMENT:
+	1. Get that patricular element.
+		var X=document.getElementById("demo");
+		x.removeChild(x.lastElementChild.PreviousElementSibling);
+	
+	ADD CSS USING NEW CLASS NAME:
+
+		CLASSNAME PROPERTY:
+			document.getElementById("demo").className="new class name";	
+		CLASSLIST PROPERTY:
+			document.getElementById("demo").classList.add('new class name');
+	REMOVE CSS:
+		
+		CLASSNAME PROPERTY:
+			document.getElementById("demo").className=" ";	
+		CLASSLIST PROPERTY:
+			document.getElementById("demo").classList.remove('new class name');
+
+	GETTING FORM DATA USING FORM NAME:
+		var form = document.forms["form_name"];
+		var use = form["name of input element/id of input element"];
+
+		eg:
+		var form = document.forms["MyForm"];
+		var use = form["user"].value;
+
+FORM VALIDATION:
+
+	1. addEventListener():
+
+		1. It will add some event.
+
+		document.addEventListener(event, function, oncapture)
+
+		Event:
+			1. Events such as onClick,onmouseover,onsubmit,....
+			2. It should be included in string format.
+			3. Prefix word 'on' should be removed. for example for onclick event,it should be specified as 'click'.
+		Function:
+			1. Function name should be included without paranthesis....
+			2. It is the event handler performs the event.
+
+		eg:-
+			Element.addEventListener("mouseover",overFunction);
+
+	2. removeEventListener():
+		
+		document.removeEventListener(event, function);
+
+		1. It will remove that particular event.
+		
+		eg:-
+			Element.removeEventListener("mouseover",overFunction);
+      
