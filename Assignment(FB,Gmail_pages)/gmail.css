@@ -1,21 +1,21 @@
-body{
+body {
     margin-top: 0;
     padding: 0;
 }
-form{
-    border: 1px solid rgb(206, 202, 202);
+
+form {
     width: fit-content;
-    padding: 50px;
-    padding-bottom: 80px;
     margin: auto;
-    margin-top: 100px;
-    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
-form h3,h6,h4{
+
+form h3,
+h6,
+h4 {
     text-align: center;
 }
-input{
+
+input {
     width: 100%;
     border: 1px solid rgb(206, 202, 202) !important;
     border-radius: 5px;
@@ -23,35 +23,38 @@ input{
     margin: 30px 0 10px 0;
 }
 
-.btn{
+.btn {
     width: 100px;
 }
 
-select{
+select {
     border: none;
 }
-.menus{
+
+.menus {
     text-align: center;
     margin-top: 50px;
     background: none !important;
 }
 
-select{
+select {
     background: none !important;
 }
 
 
-.bars a{
-    
+.bars a {
+
     text-decoration: none;
 }
-.card{
+
+.card {
     margin-left: 700px;
     margin-top: 300px;
     height: 500px;
     font-family: Arial, Helvetica, sans-serif;
 }
-img{
+
+img {
     height: 30px;
     width: 70px;
     margin-left: 160px;
