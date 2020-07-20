@@ -4,25 +4,46 @@ function validate() {
     var password = form.pass.value;
     console.log(inputValue);
     console.log(password);
-    var emailExp = new RegExp("^.+@.+\..+$");
-    var phoneExp = new RegExp('^[0-9]{10}$');
-    var passwordExp = new RegExp('^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$');
-    if (emailExp.test(inputValue) || phoneExp.test(inputValue)) {
-        if (passwordExp.test(password)) {
-            console.log("Test Passed");
-            form.submit();
-        }
 
-        else if (!passwordExp.test(password)) {
+    var get = localStorage.getItem(inputValue + "");
+    var getobj = JSON.parse(get);
+    if (get !== null) {
+        if (getobj.mail == inputValue && getobj.pass == password) {
+
+            form.submit();
+            document.write("welcome " + getobj.firstname);
+
+        }
+        else if (getobj.pass != password) {
             alert("Invalid Password");
             form.pass.focus();
         }
-    }
-    else if (!emailExp.test(inputValue)) {
-        alert("The Email or Phone is Invalid, Please Enter a valid Email or Phone number");
-        form.in.focus();
 
     }
+    else {
+        alert("Invalid Credentials / Sign up first");
+    }
+
+
+    // var emailExp = new RegExp("^.+@.+\..+$");
+    // var phoneExp = new RegExp('^[0-9]{10}$');
+    // var passwordExp = new RegExp('^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$');
+    // if (emailExp.test(inputValue) || phoneExp.test(inputValue)) {
+    //     if (passwordExp.test(password)) {
+    //         console.log("Test Passed");
+    //         form.submit();
+    //     }
+
+    //     else if (!passwordExp.test(password)) {
+    //         alert("Invalid Password");
+    //         form.pass.focus();
+    //     }
+    // }
+    // else if (!emailExp.test(inputValue)) {
+    //     alert("The Email or Phone is Invalid, Please Enter a valid Email or Phone number");
+    //     form.in.focus();
+
+    // }
 
 
 
@@ -46,9 +67,23 @@ function validateSignUp() {
         }
         return false;
     };
+    var user = {
+        firstname: formSignUp.firstName.value,
+        surname: formSignUp.surName.value,
+        mail: formSignUp.mailOrPhone.value,
+        pass: formSignUp.password.value
+    }
+    var id = formSignUp.mailOrPhone.value + "";
+    var userjson = JSON.stringify(user);
+
 
     if (firstNameCheck && surNameCheck && mailOrPhoneCheck && passwordCheck && dateCheck && genderCheck()) {
+
+        localStorage.setItem(id, userjson);
         formSignUp.submit();
+        alert("sign up successful you can login now");
+        location.reload();
+
     }
     else if (!firstNameCheck) {
         alert('Invalid FirstName');
@@ -81,3 +116,4 @@ function validateSignUp() {
     console.log(dateCheck);
     console.log(genderCheck());
 }
+
